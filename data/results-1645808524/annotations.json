@@ -1,0 +1,261 @@
+[{
+    "img_path": "data/results/cropped_images/018659.jpg",
+    "img_width": 268,
+    "img_height": 207,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018636.jpg",
+    "img_width": 390,
+    "img_height": 273,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018649.jpg",
+    "img_width": 318,
+    "img_height": 230,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018620.jpg",
+    "img_width": 546,
+    "img_height": 342,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018631.jpg",
+    "img_width": 431,
+    "img_height": 291,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018616.jpg",
+    "img_width": 597,
+    "img_height": 365,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018645.jpg",
+    "img_width": 341,
+    "img_height": 241,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018664.jpg",
+    "img_width": 254,
+    "img_height": 197,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018655.jpg",
+    "img_width": 291,
+    "img_height": 217,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018625.jpg",
+    "img_width": 490,
+    "img_height": 316,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+}]

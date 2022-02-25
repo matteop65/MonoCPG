@@ -154,12 +154,13 @@ def return_annotated_directory(raw_files_dir, tl_folder, weight_type):
 
     # folder with annotated images will be created in the same parent directory as where the raw files are present.
     images_root_dir = os.path.split(raw_files_dir)[0]
+    results_root_dir = os.path.join(os.path.split(images_root_dir)[0], 'results')
     target_annotations_folder = os.path.split(tl_folder)[1]
     # Don't include YOLOv4 if target_annotations_folder already contains it
     if "YOLOv4".lower() in target_annotations_folder.lower():
-        annotated_images = os.path.join(images_root_dir, f'Annotated-{target_annotations_folder}_{weight_type}')
+        annotated_images = os.path.join(results_root_dir, f'Annotated-{target_annotations_folder}_{weight_type}')
     else:
-        annotated_images = os.path.join(images_root_dir, f'Annotated-YOLOv4-{target_annotations_folder}_{weight_type}')
+        annotated_images = os.path.join(results_root_dir, f'Annotated-YOLOv4-{target_annotations_folder}_{weight_type}')
 
     # if folder for annotated images already exists, then rename folder to append UNIX time, as to not overwrite.
     if os.path.isdir(annotated_images):
@@ -247,7 +248,8 @@ def main():
             cfg = os.path.join(darknet_path, 'cfg/yolov4-p6.cfg')
             weights = os.path.join(darknet_path, 'weights/yolov4-p6.weights')
             coco_data = os.path.join(darknet_path, 'cfg/coco.data')
-            tl_folder=os.path.join(darknet_path, 'yolov4-p6')
+            tl_folder_YOLO=os.path.join(darknet_path, 'yolov4-p6')
+            # print(f'tl_folder {tl_folder}')
         else:
             # Remove trailing slash (if exists)
             tl_folder_trailing = os.path.expanduser(args.tl_folder)
@@ -302,6 +304,7 @@ def main():
             if exitcode != 0:
                 logevent(f"Inference did not run successfully (exit code {exitcode})",3)
 
+    return annotated_dir
 
 if __name__ == '__main__':
     main()
