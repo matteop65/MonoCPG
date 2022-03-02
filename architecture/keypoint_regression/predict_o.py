@@ -18,7 +18,7 @@ import os
 import cv2
 
 
-def predict_keypoints(json_data):
+def predict_keypoints(json_data, model_name, visualise=False):
     """
         Define hyperparameters
     """
@@ -71,23 +71,28 @@ def predict_keypoints(json_data):
         [ax.axis("off") for ax in np.ravel(axes)]
 
         co = ['#ff0000', '#ffff00', '#00ff00', '#00ffff', '#000000']
-        for (ax_orig, ax_all), image, current_keypoint in zip(axes, images, keypoints):
-            ax_orig.imshow(image)
-            ax_all.imshow(image)
+        if len(images)==1:
+            ax_orig.imshow(images)
+            ax_all.imgshow(images)
+            ax_all.scatter(keypoints[0], keypoints[1], marker="x", s=59, linewidths=5)
+        else:
+            for (ax_orig, ax_all), image, current_keypoint in zip(axes, images, keypoints):
+                ax_orig.imshow(image)
+                ax_all.imshow(image)
 
-            # If the keypoints were formed by `imgaug` then the coordinates need
-            # to be iterated differently.
-            if isinstance(current_keypoint, KeypointsOnImage):
-                for idx, kp in enumerate(current_keypoint.keypoints):
-                    ax_all.scatter(
-                        [kp.x], [kp.y], c=co[idx], marker="x", s=5, linewidths=5
-                    )
-            else:
-                current_keypoint = np.array(current_keypoint)
-                # Since the last entry is the visibility flag, we discard it.
-                current_keypoint = current_keypoint[:, :2]
-                for idx, (x, y) in enumerate(current_keypoint):
-                    ax_all.scatter([x], [y], c=co[idx], marker="x", s=50, linewidths=5)
+                # If the keypoints were formed by `imgaug` then the coordinates need
+                # to be iterated differently.
+                if isinstance(current_keypoint, KeypointsOnImage):
+                    for idx, kp in enumerate(current_keypoint.keypoints):
+                        ax_all.scatter(
+                            [kp.x], [kp.y], c=co[idx], marker="x", s=5, linewidths=5
+                        )
+                else:
+                    current_keypoint = np.array(current_keypoint)
+                    # Since the last entry is the visibility flag, we discard it.
+                    current_keypoint = current_keypoint[:, :2]
+                    for idx, (x, y) in enumerate(current_keypoint):
+                        ax_all.scatter([x], [y], c=co[idx], marker="x", s=50, linewidths=5)
 
         plt.tight_layout(pad=2.0)
         plt.show()
@@ -96,19 +101,19 @@ def predict_keypoints(json_data):
     # Select four samples randomly for visualization.
     samples = list(json_dict.keys())
     # print(f'samples: {samples}')
-    num_samples = 4
-    selected_samples = np.random.choice(samples, num_samples, replace=False)
+    # num_samples = 4
+    # selected_samples = np.random.choice(samples, num_samples, replace=False)
 
-    images, keypoints = [], []
+    # images, keypoints = [], []
 
-    for sample in selected_samples:
-        # print(sample)
-        data = get_dog(sample)
-        image = data["img_data"]
-        keypoint = data["keypoints"]
+    # for sample in selected_samples:
+    #     # print(sample)
+    #     data = get_dog(sample)
+    #     image = data["img_data"]
+    #     keypoint = data["keypoints"]
 
-        images.append(image)
-        keypoints.append(keypoint)
+    #     images.append(image)
+    #     keypoints.append(keypoint)
 
 
     """
@@ -193,12 +198,6 @@ def predict_keypoints(json_data):
     """
     Create training and validation splits
     """
-
-    # np.random.shuffle(samples)
-    train_keys, validation_keys = (
-        samples[int(len(samples) * 0.5) :],
-        samples[: int(len(samples) * 0.5)],
-    )
     inference_keys = samples
 
     # print(f'validation keys {os.path.split(validation_keys)[1]}')
@@ -206,24 +205,23 @@ def predict_keypoints(json_data):
     """
     Data generator investigation
     """
-
-    train_dataset = KeyPointsDataset(train_keys, train_aug)
-    validation_dataset = KeyPointsDataset(validation_keys, test_aug, train=False)
     # specify batch size of same size as inference key
-    inference_dataset = KeyPointsDataset(inference_keys, train_aug, batch_size = len(inference_keys),train=False)
+    inference_dataset = KeyPointsDataset(inference_keys, test_aug, batch_size = len(inference_keys),train=False)
 
 
     """
     ## Make predictions and visualize them
     """
 
-    model = keras.models.load_model('trained_models/e10_es500')
+    model = keras.models.load_model(model_name)
 
     # instead of iterating, this method works
     sample_val_images, keypnts = inference_dataset.data_generation(inference_dataset.image_keys)
     predictions = model.predict(sample_val_images).reshape(-1, 5, 2) * IMG_SIZE
 
     # Predictions
-    # visualize_keypoints(sample_val_images, predictions)
+    if visualise:
+        visualize_keypoints(sample_val_images, predictions)
 
-    return predictions, inference_dataset
+
+    return predictions, inference_dataset, sample_val_images

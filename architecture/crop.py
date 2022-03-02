@@ -2,7 +2,7 @@ import cv2
 import os
 from logfile import logevent, logtext
 
-def crop(img_pth, txt_pth, results_pth):
+def crop(ori_img_pth, img_pth, txt_pth, results_pth):
     """
         given an image, crop according to bbox, and save in output pth
 
@@ -11,7 +11,7 @@ def crop(img_pth, txt_pth, results_pth):
         saves image in data/results/cropped_images/
     """
 
-    logevent(f'cropping image {img_pth}',1)
+    logevent(f'cropping image {ori_img_pth}',1)
 
     # open txt file
     txtfile = open(txt_pth, 'r')
@@ -33,7 +33,7 @@ def crop(img_pth, txt_pth, results_pth):
         logevent('no functionality for images with multiple detections', 4)
 
 
-    img = cv2.imread(img_pth)
+    img = cv2.imread(ori_img_pth)
     crop_img = img[y:y+h, x:x+w]
 
     filename = os.path.split(img_pth)[1]

@@ -6,7 +6,7 @@ from architecture.geometric_reasoning_algorithm.projection import back_projectio
 from architecture.load_img import load_img_place_anchor_pts
 
 
-def five_anchor_points_suggested(all_anchor_point_info, camera_location, ground_plane):
+def five_keypoints_suggested(all_keypoint_info, camera_location, ground_plane):
     """
         Takes 5 anchor point inputs (in x,y,z) and uses coordinate geometry to solve relevant dimensions. 
         Uses suggested method outlined in progress document
@@ -14,33 +14,31 @@ def five_anchor_points_suggested(all_anchor_point_info, camera_location, ground_
     a_gi = []
     
     # find intersection points between ground plane and each direction vector per anchor point
-    for i in range(len(all_anchor_point_info)):
-        anchor_point_info = all_anchor_point_info[f'anchor_point_{i+1}']
-        direction = anchor_point_info['direction']
+    for i in range(len(all_keypoint_info)):
+        keypoint_info = all_keypoint_info[f'keypoint_{i+1}']
+        direction = keypoint_info['direction']
 
         vector = [camera_location.T[0], direction.T[0].tolist()]
         intersection_pt = architecture.geometric_reasoning_algorithm.geometry.intersection_plane_and_vector(ground_plane, vector)
         a_gi.append(intersection_pt)
 
         # store 3D anchor point position, used to forward projection 3D BBox onto image. 
-        anchor_point_info['3D'] = intersection_pt
-        all_anchor_point_info[f'anchor_point_{i+1}'] = anchor_point_info
+        keypoint_info['3D'] = intersection_pt
+        all_keypoint_info[f'keypoint_{i+1}'] = keypoint_info
 
     # create plane pi_1
     d12 = np.array(a_gi[0])- np.array(a_gi[1])
     d12 = d12 / np.linalg.norm(d12) # normalise d12
     normal1 = [-d12[1], d12[0],0]
     pi_1 = architecture.geometric_reasoning_algorithm.geometry.find_plane_from_normal_and_point(normal1, a_gi[4])
+    
     # find length
-    u1 = all_anchor_point_info[f'anchor_point_1']
+    u1 = all_keypoint_info[f'keypoint_1']
     u1_d = u1['direction']
     v1 = [camera_location.T[0], u1_d.T[0].tolist()]
     a_1 = architecture.geometric_reasoning_algorithm.geometry.intersection_plane_and_vector(pi_1, v1)
-    
-    # print(f'a_1: {a_1}')
-    # print(f'a_g1: {a_gi[0]}')
 
-    u2 = all_anchor_point_info[f'anchor_point_2']
+    u2 = all_keypoint_info[f'keypoint_2']
     u2_d = u2['direction']
     v2 = [camera_location.T[0], u2_d.T[0].tolist()]
     a_2 = architecture.geometric_reasoning_algorithm.geometry.intersection_plane_and_vector(pi_1, v2)
@@ -49,10 +47,10 @@ def five_anchor_points_suggested(all_anchor_point_info, camera_location, ground_
 
     # find width
     d23 = np.array(a_gi[1] - np.array(a_gi[2]))
-    normal2 = [-d23[1], d12[0], 1]
+    normal2 = [d12[0], d12[1], 0]
     pi_2 = architecture.geometric_reasoning_algorithm.geometry.find_plane_from_normal_and_point(normal2, a_2)
 
-    u3 = all_anchor_point_info[f'anchor_point_3']
+    u3 = all_keypoint_info[f'keypoint_3']
     u3_d = u3['direction']
     v3 = [camera_location.T[0], u3_d.T[0].tolist()]
     a_3 = architecture.geometric_reasoning_algorithm.geometry.intersection_plane_and_vector(pi_2, v3)
@@ -61,7 +59,7 @@ def five_anchor_points_suggested(all_anchor_point_info, camera_location, ground_
     width = abs( ( (a_2[0]-a_3[0])**2 + (a_2[1]-a_3[1]) **2 ) ** 0.5 )
 
     # find height
-    u4 = all_anchor_point_info['anchor_point_4']
+    u4 = all_keypoint_info['keypoint_4']
     u4_d = u4['direction']
     v4 = [camera_location.T[0], u4_d.T[0].tolist()]
     a_4 = architecture.geometric_reasoning_algorithm.geometry.intersection_plane_and_vector(pi_1, v4)
@@ -80,10 +78,15 @@ def five_anchor_points_suggested(all_anchor_point_info, camera_location, ground_
         "ag5":a_gi[4]
     }
 
-    return dimensions, all_anchor_point_info, vertices
+    # all_keypoint_info[""]
+
+    all_keypoint_info["pi_1"] = pi_1
+    all_keypoint_info["pi_2"] = pi_2
+
+    return dimensions, all_keypoint_info, vertices
 
 
-def four_anchor_points(all_anchor_point_info, camera_location, ground_plane):
+def four_keypoints(all_keypoint_info, camera_location, ground_plane):
     """
         Takes 4 anchor point inputs (in x,y,z) and uses coordinate geometry to solve for relevant dimensions
         Steps to solve for width and height are the same as with three anchor points. 
@@ -91,20 +94,20 @@ def four_anchor_points(all_anchor_point_info, camera_location, ground_plane):
     a_gi = [] # intersection point between v_i and ground plane 
 
     # delete anchor point 4 from dictionary passed to three anchor point solver. 
-    anchor_point_4 = all_anchor_point_info['anchor_point_4']
+    keypoint_4 = all_keypoint_info['keypoint_4']
  
-    if 'anchor_point_4' in all_anchor_point_info:
-        del all_anchor_point_info['anchor_point_4']
+    if 'keypoint_4' in all_keypoint_info:
+        del all_keypoint_info['keypoint_4']
 
     # Use 3 anchor point solver for length and width
-    dimensions, all_anchor_point_info, vertices = three_anchor_points(all_anchor_point_info, camera_location, ground_plane)
+    dimensions, all_keypoint_info, vertices = three_keypoints(all_keypoint_info, camera_location, ground_plane)
 
     # solve for height, similar to width and length
-    direction = anchor_point_4['direction']
-    anchor_point_1 = all_anchor_point_info['anchor_point_1']
-    anchor_point_2 = all_anchor_point_info['anchor_point_2']
-    a_1 = anchor_point_1['3D']
-    a_2 = anchor_point_2['3D']
+    direction = keypoint_4['direction']
+    keypoint_1 = all_keypoint_info['keypoint_1']
+    keypoint_2 = all_keypoint_info['keypoint_2']
+    a_1 = keypoint_1['3D']
+    a_2 = keypoint_2['3D']
     pi_1 = architecture.geometric_reasoning_algorithm.geometry.find_plane_from_2_points(a_1, a_2)
     v_4 = [camera_location.T[0].tolist(), direction.T[0].tolist()]
 
@@ -112,8 +115,8 @@ def four_anchor_points(all_anchor_point_info, camera_location, ground_plane):
     a_4 = architecture.geometric_reasoning_algorithm.geometry.intersection_plane_and_vector(pi_1, v_4)
 
     # store 3D anchor point 4 info
-    anchor_point_4['3D'] = a_4
-    all_anchor_point_info['anchor_point_4'] = anchor_point_4
+    keypoint_4['3D'] = a_4
+    all_keypoint_info['keypoint_4'] = keypoint_4
 
     # height defined as height difference between anchor point 2 and 4
     height = abs(a_4[2] - a_2[2])
@@ -123,19 +126,19 @@ def four_anchor_points(all_anchor_point_info, camera_location, ground_plane):
     # store information in predicted vertices, a_1, a_2, a_3, a_4
     vertices["a4"] = a_4
 
-    return dimensions, all_anchor_point_info, vertices
+    return dimensions, all_keypoint_info, vertices
 
 
-def three_anchor_points(all_anchor_point_info, camera_location, ground_plane):
+def three_keypoints(all_keypoint_info, camera_location, ground_plane):
     """
         Takes 3 anchor point inputs (in x,y,z) and uses coordinate geometry to solve for relevant dimensions
     """
     a_gi = [] # intersection point between v_i and ground plane 
 
-    for i in range(len(all_anchor_point_info)):
+    for i in range(len(all_keypoint_info)):
         # load relevant information
-        anchor_point_info = all_anchor_point_info[f'anchor_point_{i+1}']
-        direction = anchor_point_info['direction']
+        keypoint_info = all_keypoint_info[f'keypoint_{i+1}']
+        direction = keypoint_info['direction']
 
         # find intersection between vector and ground plane
         vector = [camera_location.T[0].tolist(), direction.T[0].tolist()]
@@ -143,8 +146,8 @@ def three_anchor_points(all_anchor_point_info, camera_location, ground_plane):
         a_gi.append(intersection_pt)
 
         # store 3D anchor point position, used to forward projection 3D BBox onto image. 
-        anchor_point_info['3D'] = intersection_pt
-        all_anchor_point_info[f'anchor_point_{i+1}'] = anchor_point_info
+        keypoint_info['3D'] = intersection_pt
+        all_keypoint_info[f'keypoint_{i+1}'] = keypoint_info
     
     # determine length and width
 
@@ -163,7 +166,7 @@ def three_anchor_points(all_anchor_point_info, camera_location, ground_plane):
         "a4":[0,0,0]
     }
 
-    return dimensions, all_anchor_point_info, vertices
+    return dimensions, all_keypoint_info, vertices
     
     
 
@@ -172,8 +175,8 @@ def solve_main(input):
         Step1: Load image and anchor points (u,v)
     """
     if not input['image_folder']:
-        img, anchor_pts = load_img_place_anchor_pts(input['img_path'], input['number_of_anchor_points'])
-        input['number_of_anchor_points'] = len(anchor_pts)
+        img, anchor_pts = load_img_place_anchor_pts(input['img_path'], input['number_of_keypoints'])
+        input['number_of_keypoints'] = len(anchor_pts)
         print(f'anchor pts: {anchor_pts}')
     else:
         anchor_pts = input['anchor_pts']
@@ -223,35 +226,24 @@ def solve_main(input):
         d_avg = np.array([d_x_avg, d_y_avg, d_z_avg]).reshape(3,1)
         info['direction'] = d_avg
         # print(f'info: {info}')
-        point_info[f'anchor_point_{i+1}'] = info
+        point_info[f'keypoint_{i+1}'] = info
 
     """
         Step3: Solve for the dimensions, given the number of anchor points
     """
     dimensions = []
-    location = []
     ground_plane = architecture.geometric_reasoning_algorithm.geometry.def_ground_plane()
 
-    # print(f'len anchor points: {len(anchor_pts)}')
-    if input['number_of_anchor_points'] == 3:
-        dimensions, anchor_point_info, vertices = three_anchor_points(point_info,input['camera_location'], ground_plane)
-    elif input['number_of_anchor_points'] == 4:
-        dimensions, anchor_point_info, vertices = four_anchor_points(point_info, input['camera_location'], ground_plane)
-    elif input['number_of_anchor_points'] == 5:
-        dimensions, anchor_point_info, vertices = five_anchor_points_suggested(point_info, input['camera_location'], ground_plane)
+    if input['number_of_keypoints'] == 3:
+        dimensions, keypoint_info, vertices = three_keypoints(point_info,input['camera_location'], ground_plane)
+    elif input['number_of_keypoints'] == 4:
+        dimensions, keypoint_info, vertices = four_keypoints(point_info, input['camera_location'], ground_plane)
+    elif input['number_of_keypoints'] == 5:
+        dimensions, keypoint_info, vertices = five_keypoints_suggested(point_info, input['camera_location'], ground_plane)
 
-    # print(f'\nall information regarding anchor points:')
-    # for i in range(len(anchor_point_info)):
-    #     print(f'{anchor_point_info[f"anchor_point_{i+1}"]}')
     dimensions = np.round(dimensions, 4)
  
 
-    """
-        Step5: Draw 3D Bounding Box onto image
-    """
-    # for anchor_point in range(len(anchor_point_info)):
-    #     anchor_point = anchor_point_info[f'anchor_point_{anchor_point+1}']
-    #     position_3D = anchor_point['3D']
-    #     uv = forward_projection(P, position_3D)
 
-    return dimensions, anchor_point_info, vertices
+
+    return dimensions, keypoint_info, vertices

@@ -2,15 +2,16 @@
     File run to run the entire model
 """
 import argparse
+from email.policy import default
 import shutil
 import time
 import os
-from architecture.crop import crop
+
 from architecture.keypoint_regression.global_keypnts import transform_to_global_keypnts
 from architecture.keypoint_regression.run_regression import run_regression
-
 from architecture.object_detection_2d.increase_bbox import increase_bbox
 from logfile import logevent, logtext
+from architecture.crop import crop
 
 """
     Improvements:
@@ -28,6 +29,8 @@ def parser():
     parser.add_argument("--dataset", type=str, default="", help="Location of raw images. Typically data/raw_images")
     parser.add_argument("--method", type=int, default=5, help="Which method to use. 3, 4 or 5 anchor points")
     parser.add_argument("--keypnts", type=str, default='keypnts', help="this is where the keypoints are located (compared to predicted keypoitns)")
+    parser.add_argument("--vgg_model_name", type=str, default='', help="what is the name of the trained keypoint regression model?")
+    parser.add_argument("-v", action="store_true", default="False", help="just put -v if you want to visualise the keypoint outputs")
     return parser.parse_known_args()
 
 
@@ -37,8 +40,8 @@ def check_argument_errors(*args):
     """
     if not os.path.isdir(dataset_path):
         raise(Exception(f'not valid directory for dataset: {dataset_path}'))
-    if not os.path.isdir(keypnts_path):
-        raise(Exception(f'not valid keypnts input: {args.keypnts} as it points to path: {keypnts_path}'))
+    # if not os.path.isdir(keypnts_path):
+    #     raise(Exception(f'not valid keypnts input: {args.keypnts} as it points to path: {keypnts_path}'))
     if not os.path.isdir(darknet_path):
         logevent(f'could not find darknet path: {darknet_path}', 4)
     if method != 3 or method != 4 or method != 5:
@@ -65,7 +68,7 @@ if __name__=="__main__":
 
 
     logevent(f'successfully loaded dataset: {dataset_path}',5)
-    logevent(f'successfully loaded keypnts path: {keypnts_path}',5)
+    # logevent(f'successfully loaded keypnts path: {keypnts_path}',5)
 
     # load raw images path    
     raw_images_path = os.path.join(dataset_path, 'images')
@@ -129,17 +132,18 @@ if __name__=="__main__":
         Crop images for keypoint regression    
     """
     for file in image_names:
+        original_img_pth = os.path.join(raw_images_path, file)
         img_pth = os.path.join(results_path, f'bbox_increase_{alpha}/{file}')
         txt_path = os.path.join(results_path, f'bbox_increase_{alpha}/{os.path.splitext(file)[0]}.txt')
 
-        cropped_folder = crop(img_pth, txt_path, results_path)
+        cropped_folder = crop(original_img_pth, img_pth, txt_path, results_path)
         # new_img_path = os.path.join(results)
 
     """
         run keypoint regression, create json, scale keypnts
     """
     cropped_folder = os.path.join(results_path, 'cropped_images')
-    predicted_keypoints_folder, colours = run_regression(results_path, raw_images_path, cropped_folder)
+    predicted_keypoints_folder, colours = run_regression(results_path, raw_images_path, cropped_folder, args.vgg_model_name, args.v)
 
 
     """

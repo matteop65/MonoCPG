@@ -21,9 +21,10 @@ def test():
         f.write(json_object)
 
 
-def json_info(json_path, img_path, img_width, img_height, keypoints, end):
+def json_info(json_path, img_path, img_name, img_width, img_height, keypoints, end):
     dictionary = {
         "img_path":img_path, 
+        "img_name":img_name,
         "img_width":img_width,
         "img_height":img_height,
         "keypoints":keypoints
@@ -47,7 +48,7 @@ def write_to_json(json_path, v, msg):
 
 
 
-def create_json(images_path, json_path):
+def create_json(images_path, json_path, method, train):
 
     # json path
     # json_path = 'datasetv1.json'
@@ -71,9 +72,10 @@ def create_json(images_path, json_path):
             cnt += 1
 
     cropped_folder = os.path.split(images_path)[1]
-    print(f'cropped folder: {cropped_folder}')
+
 
     relative_images_path = []
+    number=0
     # get information for json in relevant folder
     for dirpath, dirname, filenames in os.walk(images_path):
         for idx, filename in enumerate(filenames):
@@ -81,21 +83,50 @@ def create_json(images_path, json_path):
             if filename==".DS_Store":
                 raise(Exception("remove .DS_Store"))
 
-            # retrieve file paths
-            img_path = f'data/results/{cropped_folder}/{filename}'
+            # relative file paths
+            if train==False:
+                img_path = f'data/results/{cropped_folder}/{filename}'
+            elif train==True:
+                img_path = f'{images_path}/{filename}'
             relative_images_path.append(img_path)
 
+            img_name = os.path.split(img_path)[1]
             # get image dimensions
             im = Image.open(img_path)
             width, height = im.size
 
-            keypoints = [ [0,0], [0,0], [0,0], [0,0], [0,0]]
+            if train==False:
+                keypoints = [ [0,0], [0,0], [0,0], [0,0], [0,0]]
+            elif train==True:
+                keypoint_path = os.path.join(os.path.split(images_path)[0], 'gt_keypnts',os.path.splitext(filename)[0]+'.txt')
 
-            print(f'idx; {idx}')
-            if idx+1 == cnt:
-                json_info(json_path, img_path, width, height, keypoints, end=1)
+                # get contents of .txt files
+                with open(keypoint_path, "r") as f:
+                    contents = f.readlines()
+
+                # remove keypnts if method==4,3
+                if method == 4:
+                    print(f'removed: {contents[:-1]}')
+                    contents = contents[:-1]
+                elif method == 3:
+                    contents = contents[:-2]
+                
+                keypoints = []
+                for idx, num in enumerate(contents):
+                    # get each keypoint in .txt
+                    temp_keypoint = num.split()
+
+                    # convert keypoints from str to int
+                    temp_keypoint = [int(i) for i in temp_keypoint]
+                    
+                    # append to keypoints file
+                    keypoints.append(temp_keypoint)
+            number +=1
+            # print(f'idx: {number} out of {cnt}')
+            if number == cnt:
+                json_info(json_path, img_path, img_name, width, height, keypoints, end=1)
             else:
-                json_info(json_path, img_path, width, height, keypoints, end=0)
+                json_info(json_path, img_path, img_name, width, height, keypoints, end=0)
 
     write_to_json(json_path, 'a', ']')
 

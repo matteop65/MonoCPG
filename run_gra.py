@@ -4,14 +4,17 @@
 """
 
 import enum
+import codecs, json
 import statistics
+from tkinter.ttk import Separator
 import numpy as np
 import argparse
 import os
 import time
-from architecture.geometric_reasoning_algorithm.draw_bbox import anchor_points_4, anchor_points_5
+from architecture.geometric_reasoning_algorithm.draw_bbox import keypoints_4, keypoints_5
 from architecture.geometric_reasoning_algorithm.solve  import solve_main
 from data.datasetv1.camera_information import camera_info
+from logfile import logevent
 
 def parser():
     """
@@ -51,6 +54,43 @@ def img_path(map, camera, img_num):
     return path
 
 
+def create_json(json_pth, img_pth, img_name, keypoint_1, keypoint_2, keypoint_3, keypoint_4, keypoint_5, pi_1, pi_2, vertices):
+    keypoint_1["direction"] = keypoint_1["direction"].tolist()
+    keypoint_2["direction"] = keypoint_2["direction"].tolist()
+    keypoint_3["direction"] = keypoint_3["direction"].tolist()
+
+    dictionary = {
+        "img_path":img_pth,
+        "img_name":img_name,
+        "keypoint_1":keypoint_1,
+        "keypoint_2":keypoint_2,
+        "keypoint_3":keypoint_3
+    }
+    if keypoint_4 != None:
+        keypoint_4["direction"] = keypoint_4["direction"].tolist()
+        dictionary["keypoint_4"] = keypoint_4
+    
+    if keypoint_5!= None:
+        keypoint_5["direction"] = keypoint_5["direction"].tolist()
+        dictionary["keypoint_5"] = keypoint_5
+
+    if pi_1 != None:
+        dictionary["pi_1"] = pi_1
+    
+    if pi_2 != None:
+        dictionary["pi_2"] = pi_2
+    
+    dictionary["vertices"]= vertices
+
+    print(f'dictionary: {dictionary}')
+    json_object = json.dumps(dictionary, indent=4)
+    # json.dump(dictionary, codecs.open(json_pth, 'a+', encoding='utf=8'), separators=(",",":"), sort_keys=True, indent=4)
+
+    with open(json_pth, 'a+') as f:
+        # json.dumps(dictionary, f)
+        f.write(json_object)
+
+
 if __name__ == "__main__":
     args, unkownargs = parser()
     args = check_argument_error(args)
@@ -85,7 +125,9 @@ if __name__ == "__main__":
         for dirpath, dirname, filenames in os.walk(images_folder):
             for filename in filenames:
                 if filename.endswith('.jpg'):
-                    # find respective anchor pt file
+                    img_pth = os.path.join(MonoCPG, args.dataset, "images", filename)
+
+                    # find respective keypoint pt file
                     keypoint_file = os.path.join(os.path.join(results_folder, 'global_keypnts'),os.path.splitext(filename)[0]+".txt")
                     # make sure keypoint_file exists
                     if not os.path.isfile(keypoint_file):
@@ -103,38 +145,25 @@ if __name__ == "__main__":
                     # shorten the anchor_pts array to only pass through the same number as required by the solving method
                     # for solving method with 4 anchor points, only 4 anchor_pts should be passed through. 
                     anchor_pts = anchor_pts[:no_of_anchor_pts]
+                    print(f'img_path: {img_pth}')
                     input = {
                         'image_folder':1,
                         'anchor_pts':anchor_pts,
-                        'img_path': image_path,
+                        'img_path': img_pth,
                         'camera': camera,
                         'camera_location':location,
                         'intrinsics':K,
                         '2Dbbox': bbox_2D,
-                        'number_of_anchor_points':no_of_anchor_pts,
+                        'number_of_keypoints':no_of_anchor_pts,
                         'extrinsics':R_t,
                         'convention':convention
                     }
 
-                    dim, anchor_info, vertices = solve_main(input)
+                    dim, keypoint_info, vertices = solve_main(input)
                     dimensions.append(dim)
 
-                    img_num += 1
-                    print(f'------------------ RESULTS {img_num} ------------------')
-                    print(f'image: {keypoint_file}')
-                    print(f'solving method: {input["number_of_anchor_points"]} anchor points')
-                    print(f'length: {dimensions[img_num-1][0]} m')
-                    print(f'width:  {dimensions[img_num-1][1]} m')
-                    print(f'height: {dimensions[img_num-1][2]} m')
-                    # print(anchor_info)
-                    print(f'------------------------------------------------\n')
-
-
-                    # calculate the center of the vehicle
-                    # for i, anchor_pt in enumerate(anchor_info):
-                    #     for j,
-                    # print(vertices)
-                        # center length is 
+                    print(f'keypoint_info: {keypoint_info}')
+                    # raise(Exception('h'))
 
                     # draw 3d bbox onto image
                     annotated_image_folder_path = os.path.join(results_folder,f"annotated_images_method_{no_of_anchor_pts}")
@@ -157,11 +186,49 @@ if __name__ == "__main__":
                    
                     if no_of_anchor_pts == 3:
                         raise(Exception("cannot draw 3d bbox for 3 anchor pnts yet"))
-                        anchor_points_3(annotated_image_path, os.path.join(results_folder,"images",filename), P, vertices, dim)
+                        keypoints_3(annotated_image_path, os.path.join(results_folder,"images",filename), P, vertices, dim)
                     elif no_of_anchor_pts == 4:
-                        anchor_points_4(annotated_image_path, os.path.join(results_folder,"images",filename), P, vertices, dim)
+                        keypoints_4(annotated_image_path, os.path.join(results_folder,"images",filename), P, vertices, dim)
                     elif no_of_anchor_pts == 5:
-                        anchor_points_5(annotated_image_path, os.path.join(results_folder,"images",filename), P, vertices, dim)
+                        keypoints_5(annotated_image_path, os.path.join(results_folder,"images",filename), P, vertices, dim)
+
+
+                    # save information into json
+                    img_name = filename
+                    keypoint_1 = keypoint_info["keypoint_1"]
+                    keypoint_2 = keypoint_info["keypoint_2"]
+                    keypoint_3 = keypoint_info["keypoint_3"]
+                    try:
+                        keypoint_4 = keypoint_info["keypoint_4"]
+                    except:
+                        logevent(f'could not find keypoint 4, this may be because solving procedure with 3 points was selected', 2)
+                        keypoint_4 = None
+                        
+                    try:
+                        keypoint_5 = keypoint_info["keypoint_5"]
+                    except:
+                        logevent(f'could not find keypoint 5, this may be because solving procedure with 4 points was selected', 2)
+                        keypoint_5 = None
+                    try:
+                        pi_1 = keypoint_info["pi_1"]
+                        pi_2 = keypoint_info["pi_2"]
+                    except:
+                        logevent(f'could not find planes pi_1, pi_2. This may be because solving procedure with 5 points was not selected', 2)
+                        pi_1, pi_2 = None
+
+                    json_pth = os.path.join(results_folder,'outputs.json')
+                    create_json(json_pth, img_pth, img_name, keypoint_1, keypoint_2, keypoint_3, keypoint_4, keypoint_5, pi_1, pi_2, vertices)
+
+                    img_num += 1
+                    print(f'------------------ RESULTS {img_num} ------------------')
+                    print(f'image: {img_pth}')
+                    # print(f'txt file:')
+                    print(f'solving method: {input["number_of_keypoints"]} anchor points')
+                    print(f'length: {dimensions[img_num-1][0]} m')
+                    print(f'width:  {dimensions[img_num-1][1]} m')
+                    print(f'height: {dimensions[img_num-1][2]} m')
+                    # print(keypoint_info)
+                    print(f'------------------------------------------------\n')
 
 
     # for idx, num in enumerate(dimensions): print(dimensions[idx])

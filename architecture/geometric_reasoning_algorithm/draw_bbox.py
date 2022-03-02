@@ -12,7 +12,7 @@ from math import cos, sin, radians
 
 
 
-def anchor_points_4(annotated_image_path, original_image_path, P, vertices, dimensions):
+def keypoints_4(annotated_image_path, original_image_path, P, vertices, dimensions):
     """
         Draws predicted 3D BBox using anchor points
     """
@@ -54,7 +54,7 @@ def anchor_points_4(annotated_image_path, original_image_path, P, vertices, dime
     cv2.imwrite(annotated_image_path, img)
 
 
-def anchor_points_5(annotated_image_path, original_image_path, P, vertices, dimensions):
+def keypoints_5(annotated_image_path, original_image_path, P, vertices, dimensions):
     """
         Draws predicted 3D BBox using anchor points
     """
@@ -101,7 +101,7 @@ def anchor_points_5(annotated_image_path, original_image_path, P, vertices, dime
     cv2.imwrite(annotated_image_path, img)
 
 
-def anchor_points_4_center(annotated_image_path, original_image_path, P, anchor_pt_vertices, dimensions):
+def keypoints_4_center(annotated_image_path, original_image_path, P, anchor_pt_vertices, dimensions):
     """
         Draws predicted 3D BBox, using vehicles center point
     """

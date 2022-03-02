@@ -1,0 +1,5401 @@
+[{
+    "img_path": "data/results/cropped_images/023843.jpg",
+    "img_name": "023843.jpg",
+    "img_width": 520,
+    "img_height": 372,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018659.jpg",
+    "img_name": "018659.jpg",
+    "img_width": 268,
+    "img_height": 207,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018636.jpg",
+    "img_name": "018636.jpg",
+    "img_width": 390,
+    "img_height": 273,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023908.jpg",
+    "img_name": "023908.jpg",
+    "img_width": 185,
+    "img_height": 153,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022056.jpg",
+    "img_name": "022056.jpg",
+    "img_width": 338,
+    "img_height": 323,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023965.jpg",
+    "img_name": "023965.jpg",
+    "img_width": 193,
+    "img_height": 107,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022059.jpg",
+    "img_name": "022059.jpg",
+    "img_width": 331,
+    "img_height": 304,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016510.jpg",
+    "img_name": "016510.jpg",
+    "img_width": 463,
+    "img_height": 346,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020547.jpg",
+    "img_name": "020547.jpg",
+    "img_width": 157,
+    "img_height": 114,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022131.jpg",
+    "img_name": "022131.jpg",
+    "img_width": 160,
+    "img_height": 143,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023849.jpg",
+    "img_name": "023849.jpg",
+    "img_width": 439,
+    "img_height": 342,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016618.jpg",
+    "img_name": "016618.jpg",
+    "img_width": 151,
+    "img_height": 120,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022125.jpg",
+    "img_name": "022125.jpg",
+    "img_width": 168,
+    "img_height": 146,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022098.jpg",
+    "img_name": "022098.jpg",
+    "img_width": 207,
+    "img_height": 193,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018739.jpg",
+    "img_name": "018739.jpg",
+    "img_width": 137,
+    "img_height": 110,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018649.jpg",
+    "img_name": "018649.jpg",
+    "img_width": 318,
+    "img_height": 230,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020511.jpg",
+    "img_name": "020511.jpg",
+    "img_width": 162,
+    "img_height": 114,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023956.jpg",
+    "img_name": "023956.jpg",
+    "img_width": 192,
+    "img_height": 112,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018706.jpg",
+    "img_name": "018706.jpg",
+    "img_width": 183,
+    "img_height": 134,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/019580.jpg",
+    "img_name": "019580.jpg",
+    "img_width": 102,
+    "img_height": 78,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016612.jpg",
+    "img_name": "016612.jpg",
+    "img_width": 154,
+    "img_height": 125,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023866.jpg",
+    "img_name": "023866.jpg",
+    "img_width": 298,
+    "img_height": 255,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018753.jpg",
+    "img_name": "018753.jpg",
+    "img_width": 123,
+    "img_height": 107,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018748.jpg",
+    "img_name": "018748.jpg",
+    "img_width": 134,
+    "img_height": 109,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/019571.jpg",
+    "img_name": "019571.jpg",
+    "img_width": 104,
+    "img_height": 87,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020391.jpg",
+    "img_name": "020391.jpg",
+    "img_width": 190,
+    "img_height": 137,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016584.jpg",
+    "img_name": "016584.jpg",
+    "img_width": 177,
+    "img_height": 149,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/019567.jpg",
+    "img_name": "019567.jpg",
+    "img_width": 103,
+    "img_height": 85,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023959.jpg",
+    "img_name": "023959.jpg",
+    "img_width": 193,
+    "img_height": 110,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020589.jpg",
+    "img_name": "020589.jpg",
+    "img_width": 109,
+    "img_height": 91,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022095.jpg",
+    "img_name": "022095.jpg",
+    "img_width": 213,
+    "img_height": 191,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023830.jpg",
+    "img_name": "023830.jpg",
+    "img_width": 773,
+    "img_height": 481,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023941.jpg",
+    "img_name": "023941.jpg",
+    "img_width": 201,
+    "img_height": 121,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022110.jpg",
+    "img_name": "022110.jpg",
+    "img_width": 198,
+    "img_height": 168,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023926.jpg",
+    "img_name": "023926.jpg",
+    "img_width": 198,
+    "img_height": 134,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016615.jpg",
+    "img_name": "016615.jpg",
+    "img_width": 153,
+    "img_height": 120,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020505.jpg",
+    "img_name": "020505.jpg",
+    "img_width": 162,
+    "img_height": 115,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018763.jpg",
+    "img_name": "018763.jpg",
+    "img_width": 125,
+    "img_height": 98,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020331.jpg",
+    "img_name": "020331.jpg",
+    "img_width": 408,
+    "img_height": 253,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023840.jpg",
+    "img_name": "023840.jpg",
+    "img_width": 558,
+    "img_height": 400,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023905.jpg",
+    "img_name": "023905.jpg",
+    "img_width": 183,
+    "img_height": 156,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018726.jpg",
+    "img_name": "018726.jpg",
+    "img_width": 153,
+    "img_height": 116,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020475.jpg",
+    "img_name": "020475.jpg",
+    "img_width": 162,
+    "img_height": 115,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020571.jpg",
+    "img_name": "020571.jpg",
+    "img_width": 127,
+    "img_height": 98,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022143.jpg",
+    "img_name": "022143.jpg",
+    "img_width": 160,
+    "img_height": 129,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018767.jpg",
+    "img_name": "018767.jpg",
+    "img_width": 119,
+    "img_height": 98,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016504.jpg",
+    "img_name": "016504.jpg",
+    "img_width": 525,
+    "img_height": 381,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022104.jpg",
+    "img_name": "022104.jpg",
+    "img_width": 202,
+    "img_height": 178,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022044.jpg",
+    "img_name": "022044.jpg",
+    "img_width": 420,
+    "img_height": 408,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018679.jpg",
+    "img_name": "018679.jpg",
+    "img_width": 207,
+    "img_height": 165,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016605.jpg",
+    "img_name": "016605.jpg",
+    "img_width": 159,
+    "img_height": 125,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020493.jpg",
+    "img_name": "020493.jpg",
+    "img_width": 161,
+    "img_height": 116,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022128.jpg",
+    "img_name": "022128.jpg",
+    "img_width": 165,
+    "img_height": 147,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023872.jpg",
+    "img_name": "023872.jpg",
+    "img_width": 251,
+    "img_height": 220,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016599.jpg",
+    "img_name": "016599.jpg",
+    "img_width": 160,
+    "img_height": 136,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016571.jpg",
+    "img_name": "016571.jpg",
+    "img_width": 206,
+    "img_height": 167,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020553.jpg",
+    "img_name": "020553.jpg",
+    "img_width": 143,
+    "img_height": 107,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016507.jpg",
+    "img_name": "016507.jpg",
+    "img_width": 491,
+    "img_height": 362,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020535.jpg",
+    "img_name": "020535.jpg",
+    "img_width": 162,
+    "img_height": 115,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022122.jpg",
+    "img_name": "022122.jpg",
+    "img_width": 173,
+    "img_height": 154,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020523.jpg",
+    "img_name": "020523.jpg",
+    "img_width": 161,
+    "img_height": 114,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016559.jpg",
+    "img_name": "016559.jpg",
+    "img_width": 233,
+    "img_height": 185,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022038.jpg",
+    "img_name": "022038.jpg",
+    "img_width": 525,
+    "img_height": 468,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020385.jpg",
+    "img_name": "020385.jpg",
+    "img_width": 193,
+    "img_height": 148,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016536.jpg",
+    "img_name": "016536.jpg",
+    "img_width": 299,
+    "img_height": 236,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022134.jpg",
+    "img_name": "022134.jpg",
+    "img_width": 163,
+    "img_height": 140,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023851.jpg",
+    "img_name": "023851.jpg",
+    "img_width": 419,
+    "img_height": 323,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020373.jpg",
+    "img_name": "020373.jpg",
+    "img_width": 219,
+    "img_height": 162,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022062.jpg",
+    "img_name": "022062.jpg",
+    "img_width": 309,
+    "img_height": 296,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020397.jpg",
+    "img_name": "020397.jpg",
+    "img_width": 187,
+    "img_height": 136,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023974.jpg",
+    "img_name": "023974.jpg",
+    "img_width": 183,
+    "img_height": 104,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016590.jpg",
+    "img_name": "016590.jpg",
+    "img_width": 172,
+    "img_height": 142,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020481.jpg",
+    "img_name": "020481.jpg",
+    "img_width": 162,
+    "img_height": 115,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016593.jpg",
+    "img_name": "016593.jpg",
+    "img_width": 170,
+    "img_height": 138,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022140.jpg",
+    "img_name": "022140.jpg",
+    "img_width": 158,
+    "img_height": 131,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020541.jpg",
+    "img_name": "020541.jpg",
+    "img_width": 161,
+    "img_height": 116,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022041.jpg",
+    "img_name": "022041.jpg",
+    "img_width": 478,
+    "img_height": 432,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020487.jpg",
+    "img_name": "020487.jpg",
+    "img_width": 162,
+    "img_height": 115,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023911.jpg",
+    "img_name": "023911.jpg",
+    "img_width": 185,
+    "img_height": 152,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020361.jpg",
+    "img_name": "020361.jpg",
+    "img_width": 271,
+    "img_height": 180,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020499.jpg",
+    "img_name": "020499.jpg",
+    "img_width": 161,
+    "img_height": 116,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022077.jpg",
+    "img_name": "022077.jpg",
+    "img_width": 266,
+    "img_height": 241,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016624.jpg",
+    "img_name": "016624.jpg",
+    "img_width": 145,
+    "img_height": 117,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020314.jpg",
+    "img_name": "020314.jpg",
+    "img_width": 572,
+    "img_height": 324,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016581.jpg",
+    "img_name": "016581.jpg",
+    "img_width": 191,
+    "img_height": 154,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/019598.jpg",
+    "img_name": "019598.jpg",
+    "img_width": 123,
+    "img_height": 74,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023833.jpg",
+    "img_name": "023833.jpg",
+    "img_width": 698,
+    "img_height": 453,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/019576.jpg",
+    "img_name": "019576.jpg",
+    "img_width": 99,
+    "img_height": 82,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020583.jpg",
+    "img_name": "020583.jpg",
+    "img_width": 113,
+    "img_height": 93,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/019607.jpg",
+    "img_name": "019607.jpg",
+    "img_width": 122,
+    "img_height": 73,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/019585.jpg",
+    "img_name": "019585.jpg",
+    "img_width": 114,
+    "img_height": 78,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/019603.jpg",
+    "img_name": "019603.jpg",
+    "img_width": 126,
+    "img_height": 73,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020403.jpg",
+    "img_name": "020403.jpg",
+    "img_width": 183,
+    "img_height": 129,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018772.jpg",
+    "img_name": "018772.jpg",
+    "img_width": 115,
+    "img_height": 94,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022060.jpg",
+    "img_name": "022060.jpg",
+    "img_width": 323,
+    "img_height": 301,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020517.jpg",
+    "img_name": "020517.jpg",
+    "img_width": 161,
+    "img_height": 115,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016574.jpg",
+    "img_name": "016574.jpg",
+    "img_width": 191,
+    "img_height": 161,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022047.jpg",
+    "img_name": "022047.jpg",
+    "img_width": 394,
+    "img_height": 380,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018697.jpg",
+    "img_name": "018697.jpg",
+    "img_width": 196,
+    "img_height": 147,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016602.jpg",
+    "img_name": "016602.jpg",
+    "img_width": 158,
+    "img_height": 131,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022119.jpg",
+    "img_name": "022119.jpg",
+    "img_width": 177,
+    "img_height": 153,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018620.jpg",
+    "img_name": "018620.jpg",
+    "img_width": 546,
+    "img_height": 342,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020367.jpg",
+    "img_name": "020367.jpg",
+    "img_width": 259,
+    "img_height": 169,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018715.jpg",
+    "img_name": "018715.jpg",
+    "img_width": 161,
+    "img_height": 131,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023938.jpg",
+    "img_name": "023938.jpg",
+    "img_width": 204,
+    "img_height": 126,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018710.jpg",
+    "img_name": "018710.jpg",
+    "img_width": 171,
+    "img_height": 134,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016529.jpg",
+    "img_name": "016529.jpg",
+    "img_width": 331,
+    "img_height": 262,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016547.jpg",
+    "img_name": "016547.jpg",
+    "img_width": 270,
+    "img_height": 210,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016627.jpg",
+    "img_name": "016627.jpg",
+    "img_width": 138,
+    "img_height": 111,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018735.jpg",
+    "img_name": "018735.jpg",
+    "img_width": 141,
+    "img_height": 114,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018631.jpg",
+    "img_name": "018631.jpg",
+    "img_width": 431,
+    "img_height": 291,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022053.jpg",
+    "img_name": "022053.jpg",
+    "img_width": 354,
+    "img_height": 337,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016544.jpg",
+    "img_name": "016544.jpg",
+    "img_width": 276,
+    "img_height": 219,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022107.jpg",
+    "img_name": "022107.jpg",
+    "img_width": 198,
+    "img_height": 175,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018616.jpg",
+    "img_name": "018616.jpg",
+    "img_width": 597,
+    "img_height": 365,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022032.jpg",
+    "img_name": "022032.jpg",
+    "img_width": 630,
+    "img_height": 545,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022116.jpg",
+    "img_name": "022116.jpg",
+    "img_width": 185,
+    "img_height": 159,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023929.jpg",
+    "img_name": "023929.jpg",
+    "img_width": 194,
+    "img_height": 132,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/019612.jpg",
+    "img_name": "019612.jpg",
+    "img_width": 117,
+    "img_height": 69,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022092.jpg",
+    "img_name": "022092.jpg",
+    "img_width": 221,
+    "img_height": 201,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020595.jpg",
+    "img_name": "020595.jpg",
+    "img_width": 103,
+    "img_height": 89,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023923.jpg",
+    "img_name": "023923.jpg",
+    "img_width": 191,
+    "img_height": 137,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016501.jpg",
+    "img_name": "016501.jpg",
+    "img_width": 584,
+    "img_height": 395,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023875.jpg",
+    "img_name": "023875.jpg",
+    "img_width": 236,
+    "img_height": 218,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/019558.jpg",
+    "img_name": "019558.jpg",
+    "img_width": 103,
+    "img_height": 83,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023947.jpg",
+    "img_name": "023947.jpg",
+    "img_width": 201,
+    "img_height": 119,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023869.jpg",
+    "img_name": "023869.jpg",
+    "img_width": 260,
+    "img_height": 239,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022086.jpg",
+    "img_name": "022086.jpg",
+    "img_width": 242,
+    "img_height": 212,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016609.jpg",
+    "img_name": "016609.jpg",
+    "img_width": 156,
+    "img_height": 129,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016520.jpg",
+    "img_name": "016520.jpg",
+    "img_width": 380,
+    "img_height": 295,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018645.jpg",
+    "img_name": "018645.jpg",
+    "img_width": 341,
+    "img_height": 241,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018664.jpg",
+    "img_name": "018664.jpg",
+    "img_width": 254,
+    "img_height": 197,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020379.jpg",
+    "img_name": "020379.jpg",
+    "img_width": 209,
+    "img_height": 155,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022080.jpg",
+    "img_name": "022080.jpg",
+    "img_width": 254,
+    "img_height": 230,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020349.jpg",
+    "img_name": "020349.jpg",
+    "img_width": 305,
+    "img_height": 206,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020529.jpg",
+    "img_name": "020529.jpg",
+    "img_width": 162,
+    "img_height": 115,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023962.jpg",
+    "img_name": "023962.jpg",
+    "img_width": 194,
+    "img_height": 109,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023884.jpg",
+    "img_name": "023884.jpg",
+    "img_width": 208,
+    "img_height": 203,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022083.jpg",
+    "img_name": "022083.jpg",
+    "img_width": 248,
+    "img_height": 218,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018674.jpg",
+    "img_name": "018674.jpg",
+    "img_width": 245,
+    "img_height": 180,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023893.jpg",
+    "img_name": "023893.jpg",
+    "img_width": 189,
+    "img_height": 176,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016517.jpg",
+    "img_name": "016517.jpg",
+    "img_width": 407,
+    "img_height": 308,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020325.jpg",
+    "img_name": "020325.jpg",
+    "img_width": 459,
+    "img_height": 271,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022113.jpg",
+    "img_name": "022113.jpg",
+    "img_width": 192,
+    "img_height": 166,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023890.jpg",
+    "img_name": "023890.jpg",
+    "img_width": 195,
+    "img_height": 185,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023977.jpg",
+    "img_name": "023977.jpg",
+    "img_width": 178,
+    "img_height": 105,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022035.jpg",
+    "img_name": "022035.jpg",
+    "img_width": 583,
+    "img_height": 499,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020559.jpg",
+    "img_name": "020559.jpg",
+    "img_width": 135,
+    "img_height": 107,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022050.jpg",
+    "img_name": "022050.jpg",
+    "img_width": 375,
+    "img_height": 359,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023839.jpg",
+    "img_name": "023839.jpg",
+    "img_width": 582,
+    "img_height": 405,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023920.jpg",
+    "img_name": "023920.jpg",
+    "img_width": 193,
+    "img_height": 137,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020313.jpg",
+    "img_name": "020313.jpg",
+    "img_width": 584,
+    "img_height": 321,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016568.jpg",
+    "img_name": "016568.jpg",
+    "img_width": 210,
+    "img_height": 170,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/019594.jpg",
+    "img_name": "019594.jpg",
+    "img_width": 124,
+    "img_height": 75,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023836.jpg",
+    "img_name": "023836.jpg",
+    "img_width": 636,
+    "img_height": 424,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022089.jpg",
+    "img_name": "022089.jpg",
+    "img_width": 230,
+    "img_height": 208,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023854.jpg",
+    "img_name": "023854.jpg",
+    "img_width": 389,
+    "img_height": 308,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016562.jpg",
+    "img_name": "016562.jpg",
+    "img_width": 235,
+    "img_height": 179,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016578.jpg",
+    "img_name": "016578.jpg",
+    "img_width": 183,
+    "img_height": 156,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016532.jpg",
+    "img_name": "016532.jpg",
+    "img_width": 329,
+    "img_height": 249,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016555.jpg",
+    "img_name": "016555.jpg",
+    "img_width": 237,
+    "img_height": 200,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016552.jpg",
+    "img_name": "016552.jpg",
+    "img_width": 239,
+    "img_height": 199,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016621.jpg",
+    "img_name": "016621.jpg",
+    "img_width": 149,
+    "img_height": 117,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020577.jpg",
+    "img_name": "020577.jpg",
+    "img_width": 122,
+    "img_height": 97,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016540.jpg",
+    "img_name": "016540.jpg",
+    "img_width": 289,
+    "img_height": 227,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018744.jpg",
+    "img_name": "018744.jpg",
+    "img_width": 140,
+    "img_height": 111,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020319.jpg",
+    "img_name": "020319.jpg",
+    "img_width": 514,
+    "img_height": 301,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016523.jpg",
+    "img_name": "016523.jpg",
+    "img_width": 361,
+    "img_height": 283,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018776.jpg",
+    "img_name": "018776.jpg",
+    "img_width": 112,
+    "img_height": 93,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016513.jpg",
+    "img_name": "016513.jpg",
+    "img_width": 435,
+    "img_height": 330,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022146.jpg",
+    "img_name": "022146.jpg",
+    "img_width": 158,
+    "img_height": 128,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018689.jpg",
+    "img_name": "018689.jpg",
+    "img_width": 201,
+    "img_height": 151,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018655.jpg",
+    "img_name": "018655.jpg",
+    "img_width": 291,
+    "img_height": 217,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016526.jpg",
+    "img_name": "016526.jpg",
+    "img_width": 354,
+    "img_height": 273,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018684.jpg",
+    "img_name": "018684.jpg",
+    "img_width": 201,
+    "img_height": 161,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023846.jpg",
+    "img_name": "023846.jpg",
+    "img_width": 480,
+    "img_height": 347,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018719.jpg",
+    "img_name": "018719.jpg",
+    "img_width": 155,
+    "img_height": 127,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020337.jpg",
+    "img_name": "020337.jpg",
+    "img_width": 365,
+    "img_height": 235,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023983.jpg",
+    "img_name": "023983.jpg",
+    "img_width": 164,
+    "img_height": 106,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022071.jpg",
+    "img_name": "022071.jpg",
+    "img_width": 274,
+    "img_height": 254,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016596.jpg",
+    "img_name": "016596.jpg",
+    "img_width": 169,
+    "img_height": 139,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020355.jpg",
+    "img_name": "020355.jpg",
+    "img_width": 285,
+    "img_height": 195,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023887.jpg",
+    "img_name": "023887.jpg",
+    "img_width": 194,
+    "img_height": 193,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023944.jpg",
+    "img_name": "023944.jpg",
+    "img_width": 205,
+    "img_height": 119,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022065.jpg",
+    "img_name": "022065.jpg",
+    "img_width": 301,
+    "img_height": 280,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022068.jpg",
+    "img_name": "022068.jpg",
+    "img_width": 284,
+    "img_height": 269,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020343.jpg",
+    "img_name": "020343.jpg",
+    "img_width": 336,
+    "img_height": 218,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016565.jpg",
+    "img_name": "016565.jpg",
+    "img_width": 226,
+    "img_height": 174,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022074.jpg",
+    "img_name": "022074.jpg",
+    "img_width": 273,
+    "img_height": 248,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022101.jpg",
+    "img_name": "022101.jpg",
+    "img_width": 204,
+    "img_height": 185,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020565.jpg",
+    "img_name": "020565.jpg",
+    "img_width": 132,
+    "img_height": 105,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023848.jpg",
+    "img_name": "023848.jpg",
+    "img_width": 453,
+    "img_height": 343,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023857.jpg",
+    "img_name": "023857.jpg",
+    "img_width": 355,
+    "img_height": 300,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/018625.jpg",
+    "img_name": "018625.jpg",
+    "img_width": 490,
+    "img_height": 316,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023902.jpg",
+    "img_name": "023902.jpg",
+    "img_width": 174,
+    "img_height": 165,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020409.jpg",
+    "img_name": "020409.jpg",
+    "img_width": 173,
+    "img_height": 126,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/020468.jpg",
+    "img_name": "020468.jpg",
+    "img_width": 162,
+    "img_height": 116,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/022137.jpg",
+    "img_name": "022137.jpg",
+    "img_width": 158,
+    "img_height": 136,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/023980.jpg",
+    "img_name": "023980.jpg",
+    "img_width": 166,
+    "img_height": 105,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+},{
+    "img_path": "data/results/cropped_images/016587.jpg",
+    "img_name": "016587.jpg",
+    "img_width": 174,
+    "img_height": 142,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+}]

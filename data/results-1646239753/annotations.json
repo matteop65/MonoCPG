@@ -1,0 +1,28 @@
+[{
+    "img_path": "data/results/cropped_images/064597.jpg",
+    "img_name": "064597.jpg",
+    "img_width": 396,
+    "img_height": 284,
+    "keypoints": [
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ]
+}]
