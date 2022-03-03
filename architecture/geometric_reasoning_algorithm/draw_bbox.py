@@ -40,18 +40,16 @@ def keypoints_4(annotated_image_path, original_image_path, P, vertices, dimensio
     v8 = np.add(v7, [0,0,dimensions[2]])
 
     v = [v1, v2, v3, v4, v5, v6, v7, v8]
+
     # draw vertices
     img = cv2.imread(original_image_path, 1)
     img, _ = draw_vertices(img, P, vertices, [0,0,0])
     img,v2d = draw_vertices(img, P, v, [0,0,255])
     img = draw_lines(img, v2d, [144,238,144])
-    # while True:
-    #     cv2.imshow("2D forward projection", img)
-    #     key = cv2.waitKey(20) & 0xFF
-    #     if key == ord('q'):
-    #         break
 
     cv2.imwrite(annotated_image_path, img)
+
+    return v
 
 
 def keypoints_5(annotated_image_path, original_image_path, P, vertices, dimensions):
@@ -85,20 +83,18 @@ def keypoints_5(annotated_image_path, original_image_path, P, vertices, dimensio
     v8 = np.add(v7, [0,0,dimensions[2]])
 
     v = [v1, v2, v3, v4, v5, v6, v7, v8]
-    # print(f'vertices: {v}')
+
     del vertices["ag5"]
     # draw vertices
     img = cv2.imread(original_image_path, 1)
     img, _ = draw_vertices(img, P, vertices, [0,0,0])
     img,v2d = draw_vertices(img, P, v, [0,0,255])
     img = draw_lines(img, v2d, [144,238,144])
-    # while True:
-    #     cv2.imshow("2D forward projection", img)
-    #     key = cv2.waitKey(20) & 0xFF
-    #     if key == ord('q'):
-    #         break
+
 
     cv2.imwrite(annotated_image_path, img)
+
+    return v
 
 
 def keypoints_4_center(annotated_image_path, original_image_path, P, anchor_pt_vertices, dimensions):
