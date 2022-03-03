@@ -5,6 +5,7 @@
 
 import enum
 import codecs, json
+from pprint import pprint
 import statistics
 from tkinter.ttk import Separator
 import numpy as np
@@ -54,7 +55,7 @@ def img_path(map, camera, img_num):
     return path
 
 
-def create_json(json_pth, img_pth, dim, img_name, keypoint_1, keypoint_2, keypoint_3, keypoint_4, keypoint_5, pi_1, pi_2, vertices, end):
+def create_json(json_pth, img_pth, img_name, dim, keypoint_1, keypoint_2, keypoint_3, keypoint_4, keypoint_5, pi_1, pi_2, vertices, end):
     keypoint_1["direction"] = keypoint_1["direction"].tolist()
     keypoint_2["direction"] = keypoint_2["direction"].tolist()
     keypoint_3["direction"] = keypoint_3["direction"].tolist()
@@ -69,6 +70,7 @@ def create_json(json_pth, img_pth, dim, img_name, keypoint_1, keypoint_2, keypoi
         "keypoint_2":keypoint_2,
         "keypoint_3":keypoint_3
     }
+
     if keypoint_4 != None:
         keypoint_4["direction"] = keypoint_4["direction"].tolist()
         dictionary["keypoint_4"] = keypoint_4
@@ -83,8 +85,11 @@ def create_json(json_pth, img_pth, dim, img_name, keypoint_1, keypoint_2, keypoi
     if pi_2 != None:
         dictionary["pi_2"] = pi_2
     
-    dictionary["vertices"]= vertices
+    # for v in vertices:
+    #     if 
+    dictionary["vertices"]= [np.array(v).tolist() for v in vertices]
 
+    pprint(dictionary)
     print(f'dictionary: {dictionary}')
     json_object = json.dumps(dictionary, indent=4)
     # json.dump(dictionary, codecs.open(json_pth, 'a+', encoding='utf=8'), separators=(",",":"), sort_keys=True, indent=4)
@@ -134,6 +139,12 @@ if __name__ == "__main__":
             for filename in filenames:
                 total_images += 1
 
+        json_pth = os.path.join(results_folder,'outputs.json')
+
+        # start json with [
+        with open(json_pth, 'a+') as f:
+            f.write("[")
+
 
 
         # for each .jpg in image_folder, we want to run the solver.
@@ -177,7 +188,7 @@ if __name__ == "__main__":
                     dim, keypoint_info, keypoint_vertices = solve_main(input)
                     dimensions.append(dim)
 
-                    print(f'keypoint_info: {keypoint_info}')
+                    print(f'dim: {dim, dim[0]}')
                     # raise(Exception('h'))
 
                     # draw 3d bbox onto image
@@ -207,7 +218,7 @@ if __name__ == "__main__":
                     elif no_of_anchor_pts == 5:
                         vertices = keypoints_5(annotated_image_path, os.path.join(results_folder,"images",filename), P, keypoint_vertices, dim)
 
-
+                    print(f'vertices: {vertices}')
                     # save information into json
                     img_name = filename
                     length = dim[0]
@@ -233,11 +244,6 @@ if __name__ == "__main__":
                         logevent(f'could not find planes pi_1, pi_2. This may be because solving procedure with 5 points was not selected', 2)
                         pi_1, pi_2 = None
 
-                    json_pth = os.path.join(results_folder,'outputs.json')
-
-                    # start json with [
-                    with open(json_pth, 'a+') as f:
-                        f.write("[")
 
 
                     if img_num+1 == total_images:

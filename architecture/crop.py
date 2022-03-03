@@ -33,7 +33,8 @@ def crop(ori_img_pth, img_pth, txt_pth, results_pth):
         logevent('no functionality for images with multiple detections', 4)
 
 
-    img = cv2.imread(ori_img_pth)
+    img = cv2.imread(img_pth)
+    logevent(f'cropping image with red bbox. Please update this.', 2)
     crop_img = img[y:y+h, x:x+w]
 
     filename = os.path.split(img_pth)[1]

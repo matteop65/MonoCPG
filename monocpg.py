@@ -30,7 +30,7 @@ def parser():
     parser.add_argument("--method", type=int, default=5, help="Which method to use. 3, 4 or 5 anchor points")
     parser.add_argument("--keypnts", type=str, default='keypnts', help="this is where the keypoints are located (compared to predicted keypoitns)")
     parser.add_argument("--vgg_model_name", type=str, default='', help="what is the name of the trained keypoint regression model?")
-    parser.add_argument("-v", action="store_true", default="False", help="just put -v if you want to visualise the keypoint outputs")
+    parser.add_argument("-v", action="store_true", default=False, help="just put -v if you want to visualise the keypoint outputs")
     return parser.parse_known_args()
 
 
@@ -65,7 +65,7 @@ if __name__=="__main__":
     method = args.method
     check_argument_errors(dataset_path, keypnts_path, darknet_path, method)
 
-
+    # raise(Exception(f"v{args.v}"))
 
     logevent(f'successfully loaded dataset: {dataset_path}',5)
     # logevent(f'successfully loaded keypnts path: {keypnts_path}',5)
