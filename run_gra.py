@@ -55,7 +55,7 @@ def img_path(map, camera, img_num):
     return path
 
 
-def create_json(json_pth, img_pth, img_name, dim, keypoint_1, keypoint_2, keypoint_3, keypoint_4, keypoint_5, pi_1, pi_2, vertices, end):
+def create_json(json_pth, img_pth, img_name, dim, keypoint_1, keypoint_2, keypoint_3, keypoint_4, keypoint_5, pi_1, pi_2, vertices, cam_location, distance_x_to_cam, distance_y_to_cam, end):
     keypoint_1["direction"] = keypoint_1["direction"].tolist()
     keypoint_2["direction"] = keypoint_2["direction"].tolist()
     keypoint_3["direction"] = keypoint_3["direction"].tolist()
@@ -66,6 +66,9 @@ def create_json(json_pth, img_pth, img_name, dim, keypoint_1, keypoint_2, keypoi
         "length":dim[0],
         "width":dim[1],
         "height":dim[2],
+        "cam_location":cam_location, 
+        "distance_x":distance_x_to_cam,
+        "distance_y":distance_y_to_cam,
         "keypoint_1":keypoint_1,
         "keypoint_2":keypoint_2,
         "keypoint_3":keypoint_3
@@ -84,9 +87,7 @@ def create_json(json_pth, img_pth, img_name, dim, keypoint_1, keypoint_2, keypoi
     
     if pi_2 != None:
         dictionary["pi_2"] = pi_2
-    
-    # for v in vertices:
-    #     if 
+
     dictionary["vertices"]= [np.array(v).tolist() for v in vertices]
 
     pprint(dictionary)
@@ -244,12 +245,14 @@ if __name__ == "__main__":
                         logevent(f'could not find planes pi_1, pi_2. This may be because solving procedure with 5 points was not selected', 2)
                         pi_1, pi_2 = None
 
-
+                    distance_x_to_cam = abs(location[0] - vertices[0][0]).tolist()
+                    distance_y_to_cam = abs(location[1] - vertices[0][1]).tolist()
+                    print(f'distance_x: {distance_x_to_cam}')
 
                     if img_num+1 == total_images:
-                        create_json(json_pth, img_pth, img_name, dim, keypoint_1, keypoint_2, keypoint_3, keypoint_4, keypoint_5, pi_1, pi_2, vertices, end=1)
+                        create_json(json_pth, img_pth, img_name, dim, keypoint_1, keypoint_2, keypoint_3, keypoint_4, keypoint_5, pi_1, pi_2, vertices, location.tolist(), distance_x_to_cam, distance_y_to_cam, end=1)
                     else:
-                        create_json(json_pth, img_pth, img_name, dim, keypoint_1, keypoint_2, keypoint_3, keypoint_4, keypoint_5, pi_1, pi_2, vertices, end=0)                        
+                        create_json(json_pth, img_pth, img_name, dim, keypoint_1, keypoint_2, keypoint_3, keypoint_4, keypoint_5, pi_1, pi_2, vertices, location.tolist(), distance_x_to_cam, distance_y_to_cam, end=0)                        
                     
                     img_num += 1
                     print(f'------------------ RESULTS {img_num} ------------------')
