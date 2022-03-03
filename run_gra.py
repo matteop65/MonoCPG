@@ -250,9 +250,9 @@ if __name__ == "__main__":
                     print(f'distance_x: {distance_x_to_cam}')
 
                     if img_num+1 == total_images:
-                        create_json(json_pth, img_pth, img_name, dim, keypoint_1, keypoint_2, keypoint_3, keypoint_4, keypoint_5, pi_1, pi_2, vertices, location.tolist(), distance_x_to_cam, distance_y_to_cam, end=1)
+                        create_json(json_pth, img_pth, img_name, dim, keypoint_1, keypoint_2, keypoint_3, keypoint_4, keypoint_5, pi_1, pi_2, vertices, location.tolist(), distance_x_to_cam[0], distance_y_to_cam[0], end=1)
                     else:
-                        create_json(json_pth, img_pth, img_name, dim, keypoint_1, keypoint_2, keypoint_3, keypoint_4, keypoint_5, pi_1, pi_2, vertices, location.tolist(), distance_x_to_cam, distance_y_to_cam, end=0)                        
+                        create_json(json_pth, img_pth, img_name, dim, keypoint_1, keypoint_2, keypoint_3, keypoint_4, keypoint_5, pi_1, pi_2, vertices, location.tolist(), distance_x_to_cam[0], distance_y_to_cam[0], end=0)                        
                     
                     img_num += 1
                     print(f'------------------ RESULTS {img_num} ------------------')
