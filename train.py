@@ -59,7 +59,7 @@ def main():
     print(f'json_path: {json_path}')
     with open(json_path, 'r') as infile:
         json_data = json.load(infile)
-    training_model(json_data, args.model_name, IMG_SIZE=224, BATCH_SIZE=64, NUM_KEYPOINTS=method,EPOCHS=10)
+    training_model(json_data, args.model_name, IMG_SIZE=224, BATCH_SIZE=64, NUM_KEYPOINTS=method,EPOCHS=5)
 
 
 

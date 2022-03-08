@@ -10,7 +10,43 @@ from numpy import arctan
 from math import cos, sin, radians
 
 
+def keypoints_3(annotated_image_path, original_image_path, P, vertices, dimensions):
+    """
+        Draws predicted 3D BBox using anchor points
+    """
+    img = cv2.imread(original_image_path, 1)
 
+    a1 = vertices["a1"]
+    a2 = vertices["a2"]
+    a3 = vertices["a3"]
+
+    # find length and width directions. 
+    dlength = np.subtract(a1, a2)
+    dwidth = np.subtract(a2, a3)
+
+    # naming the vertices so they have same format as in CARLA. 
+    # from bottom back left, top back left, bottom back right, top back right, front bottom left, front top left...
+    v1 = a2
+    v2 = np.add(a2, [0,0,dimensions[2]])
+    v3 = a3
+    v4 = np.add(a3, [0,0,dimensions[2]])
+    v5 = a1
+    v6 = np.add(a1, [0,0,dimensions[2]])
+    int = find_intersection_2_lines( [a1, dwidth], [a3, dlength])
+    v7 = a1 + int[0]*dwidth
+    v8 = np.add(v7, [0,0,dimensions[2]])
+
+    v = [v1, v2, v3, v4, v5, v6, v7, v8]
+
+    # draw vertices
+    img = cv2.imread(original_image_path, 1)
+    img, _ = draw_vertices(img, P, vertices, [0,0,0])
+    img,v2d = draw_vertices(img, P, v, [0,0,255])
+    img = draw_lines(img, v2d, [144,238,144])
+
+    cv2.imwrite(annotated_image_path, img)
+
+    return v
 
 def keypoints_4(annotated_image_path, original_image_path, P, vertices, dimensions):
     """

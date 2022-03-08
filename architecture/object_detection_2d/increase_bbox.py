@@ -18,7 +18,7 @@ def calculate_bbox(img, txt_contents):
             - new width
             - new height
     """
-    print(f'txtcontents {txt_contents}')
+    # print(f'txtcontents {txt_contents}')
     info_array = txt_contents.split()
     vehicle_class = int(info_array[0])
     center_x = float(info_array[2])
@@ -27,7 +27,7 @@ def calculate_bbox(img, txt_contents):
     height = float(info_array[5])
 
     if vehicle_class == 7:
-        print(f'here2')
+        # print(f'here2')
         img_height, img_width, channels = img.shape
 
 
@@ -87,13 +87,13 @@ def increase_bbox(img_path, txt_path, filename, output, alpha):
     if not os.path.isdir(output_folder):
         os.system(f'mkdir {output_folder}')
 
-    print(f'output_folder: {output_folder}')
+    # print(f'output_folder: {output_folder}')
     filename = os.path.splitext(filename)[0]
     new_img_path = os.path.join(output_folder, filename+'.jpg')
     new_txt_path = os.path.join(output_folder, filename+'.txt')
 
-    print(f'new_img_path: {new_img_path}')
-    print(f'new_txt_path {new_txt_path}')
+    # print(f'new_img_path: {new_img_path}')
+    # print(f'new_txt_path {new_txt_path}')
     # if image file does not exist, return error
     if not os.path.isfile(img_path):
         logevent(f'image directory does not exist! {img_path}',4)
@@ -106,7 +106,7 @@ def increase_bbox(img_path, txt_path, filename, output, alpha):
     txtcontents = txtfile.readlines()
     vehicle = []
     
-    print(f'txtcontents: {len(txtcontents)}')
+    # print(f'txtcontents: {len(txtcontents)}')
 
     if len(txtcontents) == 1:
         img, new_top_left, new_bbox_width, new_bbox_height = calculate_bbox(img, txtcontents[0])
@@ -121,7 +121,7 @@ def increase_bbox(img_path, txt_path, filename, output, alpha):
             img, new_top_left, new_bbox_width, new_bbox_height = calculate_bbox(img, vehicle[:-1])
 
             if new_top_left != None:
-                print(f'{int(new_top_left[0])} {int(new_top_left[1])} {int(new_bbox_width)} {int(new_bbox_height)}')
+                # print(f'{int(new_top_left[0])} {int(new_top_left[1])} {int(new_bbox_width)} {int(new_bbox_height)}')
 
                 # save txt
                 savetxt(new_txt_path,f'{int(new_top_left[0])} {int(new_top_left[1])} {int(new_bbox_width)} {int(new_bbox_height)}' )

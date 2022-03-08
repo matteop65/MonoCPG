@@ -69,8 +69,8 @@ def five_keypoints_suggested(all_keypoint_info, camera_location, ground_plane):
 
     dimensions = [length, width, height]
 
-    # store the information of the predicted vertices, a_1, a_2, a_3, a_4
-    vertices = {
+    # store the information of the predicted keypoint_vertices, a_1, a_2, a_3, a_4
+    keypoint_vertices = {
         "a1":a_1, 
         "a2":a_2,
         "a3":a_3,
@@ -83,7 +83,7 @@ def five_keypoints_suggested(all_keypoint_info, camera_location, ground_plane):
     all_keypoint_info["pi_1"] = pi_1
     all_keypoint_info["pi_2"] = pi_2
 
-    return dimensions, all_keypoint_info, vertices
+    return dimensions, all_keypoint_info, keypoint_vertices
 
 
 def four_keypoints(all_keypoint_info, camera_location, ground_plane):
@@ -100,7 +100,7 @@ def four_keypoints(all_keypoint_info, camera_location, ground_plane):
         del all_keypoint_info['keypoint_4']
 
     # Use 3 anchor point solver for length and width
-    dimensions, all_keypoint_info, vertices = three_keypoints(all_keypoint_info, camera_location, ground_plane)
+    dimensions, all_keypoint_info, keypoint_vertices = three_keypoints(all_keypoint_info, camera_location, ground_plane)
 
     # solve for height, similar to width and length
     direction = keypoint_4['direction']
@@ -123,10 +123,13 @@ def four_keypoints(all_keypoint_info, camera_location, ground_plane):
 
     dimensions = [dimensions[0], dimensions[1], height]
 
-    # store information in predicted vertices, a_1, a_2, a_3, a_4
-    vertices["a4"] = a_4
+    # store information in predicted keypoint_vertices, a_1, a_2, a_3, a_4
+    keypoint_vertices["a4"] = a_4
 
-    return dimensions, all_keypoint_info, vertices
+    all_keypoint_info["pi_1"] = pi_1
+
+
+    return dimensions, all_keypoint_info, keypoint_vertices
 
 
 def three_keypoints(all_keypoint_info, camera_location, ground_plane):
@@ -159,14 +162,14 @@ def three_keypoints(all_keypoint_info, camera_location, ground_plane):
     height = 0 # to be determined as a constant value per vehicle class
     dimensions = [length, width, height]
 
-    vertices = {
+    keypoint_vertices = {
         "a1":a_gi[0],
         "a2":a_gi[1],
         "a3":a_gi[2],
         "a4":[0,0,0]
     }
 
-    return dimensions, all_keypoint_info, vertices
+    return dimensions, all_keypoint_info, keypoint_vertices
     
     
 
@@ -235,15 +238,15 @@ def solve_main(input):
     ground_plane = architecture.geometric_reasoning_algorithm.geometry.def_ground_plane()
 
     if input['number_of_keypoints'] == 3:
-        dimensions, keypoint_info, vertices = three_keypoints(point_info,input['camera_location'], ground_plane)
+        dimensions, keypoint_info, keypoint_vertices = three_keypoints(point_info,input['camera_location'], ground_plane)
     elif input['number_of_keypoints'] == 4:
-        dimensions, keypoint_info, vertices = four_keypoints(point_info, input['camera_location'], ground_plane)
+        dimensions, keypoint_info, keypoint_vertices = four_keypoints(point_info, input['camera_location'], ground_plane)
     elif input['number_of_keypoints'] == 5:
-        dimensions, keypoint_info, vertices = five_keypoints_suggested(point_info, input['camera_location'], ground_plane)
+        dimensions, keypoint_info, keypoint_vertices = five_keypoints_suggested(point_info, input['camera_location'], ground_plane)
 
     dimensions = np.round(dimensions, 4)
  
 
 
 
-    return dimensions, keypoint_info, vertices
+    return dimensions, keypoint_info, keypoint_vertices

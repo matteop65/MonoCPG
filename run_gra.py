@@ -8,11 +8,12 @@ import codecs, json
 from pprint import pprint
 import statistics
 from tkinter.ttk import Separator
+from cv2 import log
 import numpy as np
 import argparse
 import os
 import time
-from architecture.geometric_reasoning_algorithm.draw_bbox import keypoints_4, keypoints_5
+from architecture.geometric_reasoning_algorithm.draw_bbox import keypoints_3, keypoints_4, keypoints_5
 from architecture.geometric_reasoning_algorithm.solve  import solve_main
 from data.datasetv1.camera_information import camera_info
 from logfile import logevent
@@ -93,8 +94,8 @@ def create_json(json_pth, img_pth, img_name, dim, delta_dim, keypoint_1, keypoin
 
     dictionary["vertices"]= [np.array(v).tolist() for v in vertices]
 
-    pprint(dictionary)
-    print(f'dictionary: {dictionary}')
+    # pprint(dictionary)
+    # print(f'dictionary: {dictionary}')
     json_object = json.dumps(dictionary, indent=4)
     # json.dump(dictionary, codecs.open(json_pth, 'a+', encoding='utf=8'), separators=(",",":"), sort_keys=True, indent=4)
 
@@ -161,114 +162,120 @@ if __name__ == "__main__":
                     keypoint_file = os.path.join(os.path.join(results_folder, 'global_keypnts'),os.path.splitext(filename)[0]+".txt")
                     # make sure keypoint_file exists
                     if not os.path.isfile(keypoint_file):
-                        raise(Exception(f"anchot_pt information for {keypoint_file} does not exist.\n Looked for anchor_pt infor in {keypoint_file}"))
-
-
-                    # extract the contents of the keypoint_file
-                    no_of_anchor_pts = args.method                
-                    txtfile = open(keypoint_file, "r")
-                    txtcontents = txtfile.readlines()
-                    anchor_pts = []
-                    for row in txtcontents:
-                        anchor_pts.append( list(map(int, row.split())))
-
-                    # shorten the anchor_pts array to only pass through the same number as required by the solving method
-                    # for solving method with 4 anchor points, only 4 anchor_pts should be passed through. 
-                    anchor_pts = anchor_pts[:no_of_anchor_pts]
-                    print(f'img_path: {img_pth}')
-                    input = {
-                        'image_folder':1,
-                        'anchor_pts':anchor_pts,
-                        'img_path': img_pth,
-                        'camera': camera,
-                        'camera_location':location,
-                        'intrinsics':K,
-                        '2Dbbox': bbox_2D,
-                        'number_of_keypoints':no_of_anchor_pts,
-                        'extrinsics':R_t,
-                        'convention':convention
-                    }
-
-                    dim, keypoint_info, keypoint_vertices = solve_main(input)
-                    dimensions.append(dim)
-
-                    gt_dim = [7.3306, 2.326, 2.9739]
-                    delta_dim = np.subtract(gt_dim, dim).tolist()
-
-                    print(f'dim: {dim, dim[0]}')
-                    # raise(Exception('h'))
-
-                    # draw 3d bbox onto image
-                    annotated_image_folder_path = os.path.join(results_folder,f"annotated_images_method_{no_of_anchor_pts}")
-                    if not os.path.isdir(annotated_image_folder_path):
-                        try:
-                            print(f'[INFO] creating annotated image directory at: {annotated_image_folder_path}')
-                            os.mkdir(annotated_image_folder_path)
-                        except:
-                            print(f"[WARNING] could not create directory, annotated_image_path {annotated_image_folder_path}")
-                    annotated_image_path  = os.path.join(annotated_image_folder_path, filename)
-                    
-                    if os.path.isfile(annotated_image_path):
-                        print(f'[WARNING] file, {annotated_image_path} already exists - renaming with UNIX time -.')
-                        print(annotated_image_path[:-4])
-                        os.rename(annotated_image_path, f'{annotated_image_path[:-4]}-{int(time.time())}.jpg')
-                        
-
-                    P = K @ convention @ R_t
-                    P = np.concatenate([P, np.array((0, 0, 0, 1)).reshape(1,-1)], axis=0)
-                   
-                    if no_of_anchor_pts == 3:
-                        raise(Exception("cannot draw 3d bbox for 3 anchor pnts yet"))
-                        keypoints_3(annotated_image_path, os.path.join(results_folder,"images",filename), P, vertices, dim)
-                    elif no_of_anchor_pts == 4:
-                        vertices = keypoints_4(annotated_image_path, os.path.join(results_folder,"images",filename), P, keypoint_vertices, dim)
-                    elif no_of_anchor_pts == 5:
-                        vertices = keypoints_5(annotated_image_path, os.path.join(results_folder,"images",filename), P, keypoint_vertices, dim)
-
-                    print(f'vertices: {vertices}')
-                    # save information into json
-                    img_name = filename
-                    length = dim[0]
-                    width = dim[1]
-                    height = dim[2]
-                    keypoint_1 = keypoint_info["keypoint_1"]
-                    keypoint_2 = keypoint_info["keypoint_2"]
-                    keypoint_3 = keypoint_info["keypoint_3"]
-                    try:
-                        keypoint_4 = keypoint_info["keypoint_4"]
-                    except:
-                        logevent(f'could not find keypoint 4, this may be because solving procedure with 3 points was selected', 2)
-                        keypoint_4 = None
-                    try:
-                        keypoint_5 = keypoint_info["keypoint_5"]
-                    except:
-                        logevent(f'could not find keypoint 5, this may be because solving procedure with 4 points was selected', 2)
-                        keypoint_5 = None
-                    try:
-                        pi_1 = keypoint_info["pi_1"]
-                        pi_2 = keypoint_info["pi_2"]
-                    except:
-                        logevent(f'could not find planes pi_1, pi_2. This may be because solving procedure with 5 points was not selected', 2)
-                        pi_1, pi_2 = None
-
-                    distance_x_to_cam = abs(location[0] - vertices[0][0]).tolist()
-                    distance_y_to_cam = abs(location[1] - vertices[0][1]).tolist()
-                    print(f'distance_x: {distance_x_to_cam}')
-
-
-                    if img_num+1 == total_images:
-                        create_json(json_pth, img_pth, img_name, dim, delta_dim, keypoint_1, keypoint_2, keypoint_3, keypoint_4, keypoint_5, pi_1, pi_2, vertices, location.tolist(), distance_x_to_cam[0], distance_y_to_cam[0], end=1)
+                        logevent(f"keypoint information for {keypoint_file} does not exist.\n Looked for anchor_pt infor in {keypoint_file}",2)
                     else:
-                        create_json(json_pth, img_pth, img_name, dim, delta_dim, keypoint_1, keypoint_2, keypoint_3, keypoint_4, keypoint_5, pi_1, pi_2, vertices, location.tolist(), distance_x_to_cam[0], distance_y_to_cam[0], end=0)                        
+                        # extract the contents of the keypoint_file
+                        no_of_anchor_pts = args.method                
+                        txtfile = open(keypoint_file, "r")
+                        txtcontents = txtfile.readlines()
+                        anchor_pts = []
+                        for row in txtcontents:
+                            anchor_pts.append( list(map(int, row.split())))
+
+                        # shorten the anchor_pts array to only pass through the same number as required by the solving method
+                        # for solving method with 4 anchor points, only 4 anchor_pts should be passed through. 
+                        anchor_pts = anchor_pts[:no_of_anchor_pts]
+                        # print(f'img_path: {img_pth}')
+                        input = {
+                            'image_folder':1,
+                            'anchor_pts':anchor_pts,
+                            'img_path': img_pth,
+                            'camera': camera,
+                            'camera_location':location,
+                            'intrinsics':K,
+                            '2Dbbox': bbox_2D,
+                            'number_of_keypoints':no_of_anchor_pts,
+                            'extrinsics':R_t,
+                            'convention':convention
+                        }
+
+                        dim, keypoint_info, keypoint_vertices = solve_main(input)
+                        dimensions.append(dim)
+
+                        if args.method==3:
+                            dim[2]=3
+
+                        gt_dim = [7.3306, 2.326, 2.9739]
+                        delta_dim = np.subtract(gt_dim, dim).tolist()
+
+
+
+                        # draw 3d bbox onto image
+                        annotated_image_folder_path = os.path.join(results_folder,f"annotated_images_method_{no_of_anchor_pts}")
+                        if not os.path.isdir(annotated_image_folder_path):
+                            try:
+                                logevent(f'creating annotated image directory at: {annotated_image_folder_path}',1)
+                                os.mkdir(annotated_image_folder_path)
+                            except:
+                                logevent(f"Could not create directory, annotated_image_path {annotated_image_folder_path}",2)
+                        annotated_image_path  = os.path.join(annotated_image_folder_path, filename)
+                        
+                        if os.path.isfile(annotated_image_path):
+                            logevent(f'File {annotated_image_path} already exists - renaming with UNIX time -.',2)
+                            # print(annotated_image_path[:-4])
+                            os.rename(annotated_image_path, f'{annotated_image_path[:-4]}-{int(time.time())}.jpg')
+                            
+
+                        P = K @ convention @ R_t
+                        P = np.concatenate([P, np.array((0, 0, 0, 1)).reshape(1,-1)], axis=0)
                     
-                    img_num += 1
-                    print(f'------------------ RESULTS {img_num} ------------------')
-                    print(f'image: {img_pth}')
-                    print(f'solving method: {input["number_of_keypoints"]} anchor points')
-                    print(f'length: {dimensions[img_num-1][0]} m')
-                    print(f'width:  {dimensions[img_num-1][1]} m')
-                    print(f'height: {dimensions[img_num-1][2]} m')
-                    print(f'------------------------------------------------\n')
+                        if no_of_anchor_pts == 3:
+                            # raise(Exception("cannot draw 3d bbox for 3 anchor pnts yet"))
+                            vertices = keypoints_3(annotated_image_path, os.path.join(results_folder,"images",filename), P, keypoint_vertices, dim)
+                        elif no_of_anchor_pts == 4:
+                            vertices = keypoints_4(annotated_image_path, os.path.join(results_folder,"images",filename), P, keypoint_vertices, dim)
+                        elif no_of_anchor_pts == 5:
+                            vertices = keypoints_5(annotated_image_path, os.path.join(results_folder,"images",filename), P, keypoint_vertices, dim)
+
+                        # print(f'vertices: {vertices}')
+                        # save information into json
+                        img_name = filename
+                        length = dim[0]
+                        width = dim[1]
+                        height = dim[2]
+                        keypoint_1 = keypoint_info["keypoint_1"]
+                        keypoint_2 = keypoint_info["keypoint_2"]
+                        keypoint_3 = keypoint_info["keypoint_3"]
+                        try:
+                            keypoint_4 = keypoint_info["keypoint_4"]
+                        except:
+                            logevent(f'could not find keypoint 4, this may be because solving procedure with 3 points was selected', 2)
+                            keypoint_4 = None
+                        try:
+                            keypoint_5 = keypoint_info["keypoint_5"]
+                        except:
+                            logevent(f'could not find keypoint 5, this may be because solving procedure with 4 points was selected', 2)
+                            keypoint_5 = None
+                        try:
+                            pi_1 = keypoint_info["pi_1"]
+                        except:
+                            logevent(f'could not find plane pi_1. This may be because solving precude with 3 points was selected',2)
+                            pi_1 = None
+                        try:
+                            pi_2 = keypoint_info["pi_2"]
+                        except:
+                            logevent(f'could not find planes pi_1, pi_2. This may be because solving procedure with 5 points was not selected', 2)
+                            # pi_1 = None
+                            pi_2 = None
+                        
+                        distance_x_to_cam = abs(location[0] - vertices[0][0]).tolist()
+                        distance_y_to_cam = abs(location[1] - vertices[0][1]).tolist()
+                        # print(f'distance_x: {distance_x_to_cam}')
+
+
+                        if img_num+1 == total_images:
+                            create_json(json_pth, img_pth, img_name, dim, delta_dim, keypoint_1, keypoint_2, keypoint_3, keypoint_4, keypoint_5, pi_1, pi_2, vertices, location.tolist(), distance_x_to_cam[0], distance_y_to_cam[0], end=1)
+                        else:
+                            create_json(json_pth, img_pth, img_name, dim, delta_dim, keypoint_1, keypoint_2, keypoint_3, keypoint_4, keypoint_5, pi_1, pi_2, vertices, location.tolist(), distance_x_to_cam[0], distance_y_to_cam[0], end=0)                        
+                        
+                        img_num += 1
+                        print(f'------------------ RESULTS {img_num} ------------------')
+                        print(f'image: {img_pth}')
+                        print(f'solving method: {input["number_of_keypoints"]} anchor points')
+                        print(f'length: {dimensions[img_num-1][0]} m')
+                        print(f'width:  {dimensions[img_num-1][1]} m')
+                        print(f'height: {dimensions[img_num-1][2]} m')
+                        print(f'------------------------------------------------\n')
 
     # finish ] at end of json
     with open(json_pth, 'a+') as f:

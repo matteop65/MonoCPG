@@ -18,7 +18,7 @@ import os
 import cv2
 
 
-def predict_keypoints(json_data, model_name, visualise=False):
+def predict_keypoints(json_data, model_name, NUM_KEYPOINTS, visualise=False,):
     """
         Define hyperparameters
     """
@@ -26,7 +26,7 @@ def predict_keypoints(json_data, model_name, visualise=False):
     IMG_SIZE = 224
     BATCH_SIZE = 200
     EPOCHS = 10
-    NUM_KEYPOINTS = 5 * 2  # 24 pairs each having x and y coordinates
+    # NUM_KEYPOINTS = 5 * 2  # 24 pairs each having x and y coordinates
 
     """
     Load data
@@ -158,9 +158,9 @@ def predict_keypoints(json_data, model_name, visualise=False):
         def data_generation(self, image_keys_temp):
             batch_images = np.empty((self.batch_size, IMG_SIZE, IMG_SIZE, 3), dtype="int")
             batch_keypoints = np.empty(
-                (self.batch_size, 1, 1, NUM_KEYPOINTS), dtype="float32"
+                (self.batch_size, 1, 1, 5*2), dtype="float32"
             )
-            print(f'len image keys; {len(image_keys_temp)}')
+            # print(f'len image keys; {len(image_keys_temp)}')
             for i, key in enumerate(image_keys_temp):
                 data = get_dog(key)
                 current_keypoint = np.array(data["keypoints"])[:, :2]
@@ -186,12 +186,12 @@ def predict_keypoints(json_data, model_name, visualise=False):
                     kp_temp.append(np.nan_to_num(keypoint.y))
 
                 # More on why this reshaping later.
-                batch_keypoints[i,] = np.array(kp_temp).reshape(1, 1, NUM_KEYPOINTS)
+                batch_keypoints[i,] = np.array(kp_temp).reshape(1, 1, 5*2)
 
 
             # Scale the coordinates to [0, 1] range.
             batch_keypoints = batch_keypoints / IMG_SIZE
-            print(f'len batch images: {len(batch_images)}')
+            # print(f'len batch images: {len(batch_images)}')
             return (batch_images, batch_keypoints)
 
 
@@ -217,7 +217,7 @@ def predict_keypoints(json_data, model_name, visualise=False):
 
     # instead of iterating, this method works
     sample_val_images, keypnts = inference_dataset.data_generation(inference_dataset.image_keys)
-    predictions = model.predict(sample_val_images).reshape(-1, 5, 2) * IMG_SIZE
+    predictions = model.predict(sample_val_images).reshape(-1, NUM_KEYPOINTS, 2) * IMG_SIZE
 
     # Predictions
     if visualise:
