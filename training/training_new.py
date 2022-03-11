@@ -26,7 +26,7 @@ def training_model(json_data, model_name, IMG_SIZE, BATCH_SIZE, NUM_KEYPOINTS, E
     # BATCH_SIZE = 64
     # EPOCHS = 10
     # NUM_KEYPOINTS = 5 * 2  # 24 pairs each having x and y coordinates
-    BATCH_NUMBER = 1000
+    BATCH_NUMBER = 5000
 
     """
     Load data
@@ -222,13 +222,6 @@ def training_model(json_data, model_name, IMG_SIZE, BATCH_SIZE, NUM_KEYPOINTS, E
         samples[: int(len(samples) * 0.4)],
     )
 
-    # print(f'train_keys: {train_keys}')
-
-    # train_keys, validation_keys = (
-    #     samples[3],
-    #     samples[1],
-    # )
-
 
     """
     Data generator investigation
@@ -275,7 +268,7 @@ def training_model(json_data, model_name, IMG_SIZE, BATCH_SIZE, NUM_KEYPOINTS, E
     model = vgg_model(IMG_SIZE, NUM_KEYPOINTS*2)
     model.summary()
     model.compile(loss="mse", optimizer=keras.optimizers.Adam(1e-4))
-    checkpoint = ModelCheckpoint("trained_models/best_training_model", monitor="loss", verbose=1, save_best_only=True, mode='auto', save_freq=64)
+    checkpoint = ModelCheckpoint("trained_models/best_training_model", monitor="loss", verbose=1, save_best_only=True, mode='auto', save_freq=1000)
     model.fit(train_dataset, validation_data=validation_dataset, epochs=EPOCHS, callbacks=[checkpoint])
 
     save_model_path = f'trained_models/{model_name}'

@@ -8,14 +8,14 @@ from architecture.keypoint_regression.write_to_json import create_json
 
 
 
-def run_regression(results_path, raw_images_path, cropped_path, model_name, v):
+def run_regression(results_path, raw_images_path, cropped_path, model_name, num_keypoints, v):
     """
         runs keypoint regression given cropped images, 
             - creates json
             - gets predictions
             - scales keypoints to original img resolution
     """
-    print(f'\n\n\n\n')
+    # print(f'\n\n\n\n')
 
 
     """
@@ -31,8 +31,8 @@ def run_regression(results_path, raw_images_path, cropped_path, model_name, v):
     with open(json_pth) as infile:
         json_data = json.load(infile)
     
-    predictions, inference_dataset, sample_val_images = predict_keypoints(json_data, model_name, visualise=v)
-    print(f'predictions: {predictions}')
+    predictions, inference_dataset, sample_val_images = predict_keypoints(json_data, model_name, num_keypoints,visualise=v)
+    # print(f'predictions: {predictions}')
 
     """ this was a temporary output to see what the sample_val_images looked liked"""
     # # images input to the model
@@ -92,12 +92,12 @@ def run_regression(results_path, raw_images_path, cropped_path, model_name, v):
 
         uv = []
         for i, keypnt in enumerate(num):
-            print(f'image_name: {img_name[idx]}')
-            print(f'imagesize: {img_width[idx], img_height[idx]}')
-            print(f'old keypnt: {keypnt[0], keypnt[1]}')
+            # print(f'image_name: {img_name[idx]}')
+            # print(f'imagesize: {img_width[idx], img_height[idx]}')
+            # print(f'old keypnt: {keypnt[0], keypnt[1]}')
             u = keypnt[0] * img_width[idx] / 224
             v = keypnt[1] * img_height[idx] / 224
-            print(f'new keypnt: {u,v}')
+            # print(f'new keypnt: {u,v}')
             uv.append( [u, v])
 
         scaled_keypnts.append(uv)
@@ -159,5 +159,5 @@ def run_regression(results_path, raw_images_path, cropped_path, model_name, v):
                 v = keypnt[1]
                 f.write(f'{str(u)} {str(v)}\n')
     
-    print(f'\n\n\n\n')
+    # print(f'\n\n\n\n')
     return predicted_keypnts_folder, colours

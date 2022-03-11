@@ -4,8 +4,11 @@
 import argparse
 from email.policy import default
 import shutil
+from syslog import LOG_DEBUG
 import time
 import os
+
+from pkg_resources import load_entry_point
 
 from architecture.keypoint_regression.global_keypnts import transform_to_global_keypnts
 from architecture.keypoint_regression.run_regression import run_regression
@@ -76,7 +79,7 @@ if __name__=="__main__":
     for dirpath, dirname, filenames in os.walk(raw_images_path):
         image_names.append(filenames)
     image_names = image_names[0]
-
+ 
     #  print(f'raw_images_path: {raw_images_path}')
 
     """
@@ -119,37 +122,50 @@ if __name__=="__main__":
         increase size of bbox by 10%
     """
     cnt = 0
-    print(f'len img_names: {len(image_names)}')
+    logevent(f'Increasing size of bounding boxes',1)
     for file in image_names:
-        cnt +=1 
-        print(cnt)
         img_pth = os.path.join(raw_images_path, file)
         txt_path = os.path.join(results_path,'Annotated-YOLOv4-p6_best', os.path.splitext(file)[0]+'.txt')
         increase_bbox_folder = increase_bbox(img_pth, txt_path, file, results_path, alpha)
-    
+    logevent(f'Succefully increased size of all bounding boxes by: {alpha}',5)
 
     """
         Crop images for keypoint regression    
     """
-    for file in image_names:
+    logevent(f'Cropping images to only countain relevant bounding box.', 1)
+    logevent(f'cropping image with red bbox. Please update this.', 2)
+
+    YOLO_detections = []
+    for dirpath, dirname, filenames in os.walk(os.path.join(results_path,'Annotated-YOLOv4-p6_best',)):
+        YOLO_detections.append(filenames)
+    YOLO_detections = YOLO_detections[0]
+
+    for file in YOLO_detections:
         original_img_pth = os.path.join(raw_images_path, file)
-        img_pth = os.path.join(results_path, f'bbox_increase_{alpha}/{file}')
+        img_pth = os.path.join(results_path, f'bbox_increase_{alpha}/{os.path.splitext(file)[0]}.jpg')
         txt_path = os.path.join(results_path, f'bbox_increase_{alpha}/{os.path.splitext(file)[0]}.txt')
 
         cropped_folder = crop(original_img_pth, img_pth, txt_path, results_path)
         # new_img_path = os.path.join(results)
-
+    logevent(f'Succeffully cropped all images in {increase_bbox_folder} to {cropped_folder}',5)
     """
         run keypoint regression, create json, scale keypnts
     """
+    logevent(f'Running Keypoint Regression',1)
     cropped_folder = os.path.join(results_path, 'cropped_images')
-    predicted_keypoints_folder, colours = run_regression(results_path, raw_images_path, cropped_folder, args.vgg_model_name, args.v)
-
+    predicted_keypoints_folder, colours = run_regression(results_path, raw_images_path, cropped_folder, args.vgg_model_name, args.method ,args.v)
+    logevent(f'Succesffuly run keypoint regression', 5)
 
     """
         Transpose local keypnts to global img coordinates
     """
-    for file in image_names:
+    logevent(f'Transposing keypoints from cropped image to original dataset image',1)
+    cropped_names = []
+    for dirpath, dirname, filenames in os.walk(predicted_keypoints_folder):
+        cropped_names.append(filenames)
+    cropped_names = cropped_names[0]
+
+    for file in cropped_names:
         bbox_2d_path = increase_bbox_folder
         local_keypoints_path = os.path.join(results_path, predicted_keypoints_folder)
 
@@ -157,12 +173,18 @@ if __name__=="__main__":
         bbox_img_path = os.path.join(bbox_2d_path, txt_name)
         local_keypoint_txt = os.path.join(local_keypoints_path, txt_name)
 
-        img_pth = os.path.join(raw_images_path, file)
+        img_name = os.path.splitext(file)[0] +'.jpg'
+        img_pth = os.path.join(raw_images_path, img_name)
+        # logevent(f'predicted_keypoitns_folder {predicted_keypoints_folder}',2)
+        # logevent(f'cropped names: {cropped_names}')
+        # logevent(f'img_pth: {img_pth}')
         transform_to_global_keypnts(bbox_img_path, local_keypoint_txt, img_pth, colours) 
 
-
+    logevent(f'Successfully transposed keypoints to global images', 5)
 
     """
         Run geometric reasoning algorithm
     """
+    logevent(f'Running GRA', 1)
     os.system(f'python run_gra.py --dataset {dataset_path} --method {args.method}')
+    logevent(f'Successfully run GRA', 5)

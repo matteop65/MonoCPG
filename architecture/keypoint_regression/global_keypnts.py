@@ -16,31 +16,31 @@ def transform_to_global_keypnts(bbox_path, local_keypnts_path, img_path, colours
     # find top left of 2d bbox (with increased size)
     if len(bbxcontents) == 1:
         txtcontents = bbxcontents[0]
-        print(f'txtcontents: {txtcontents}')
+        # print(f'txtcontents: {txtcontents}')
 
         content = txtcontents.split()
         bbx_u = int(content[0])
         bbx_v = int(content[1])
 
-        print(f'bbox u,v: {bbx_u, bbx_v}')
+        # print(f'bbox u,v: {bbx_u, bbx_v}')
     else:
         logevent('no functionality for images with multiple detections', 4)
 
     with open(local_keypnts_path, 'r') as keypnts_file:
         keypnts_contents = keypnts_file.readlines()
 
-    print(f'keypnts_contents: {keypnts_contents}')
+    # print(f'keypnts_contents: {keypnts_contents}')
     # keypnts_contents.splitext(" ")
     # transpose local to global coordinates
     trsp_coords = []
     for idx, num in enumerate(keypnts_contents):
         num = num[:-1]
-        print(f'num: {num}')
-        print(f'type(num): {type(num)}')
+        # print(f'num: {num}')
+        # print(f'type(num): {type(num)}')
         num = num.split(" ")
-        print(f'num: {num}')
-        print(f'num[0]: {float(num[0])}')
-        print(f'num[1]: {float(num[1])}')
+        # print(f'num: {num}')
+        # print(f'num[0]: {float(num[0])}')
+        # print(f'num[1]: {float(num[1])}')
         transpose_u = float(num[0]) + bbx_u
         transpose_v = float(num[1]) + bbx_v
         trsp_coords.append([transpose_u, transpose_v])
@@ -58,8 +58,8 @@ def transform_to_global_keypnts(bbox_path, local_keypnts_path, img_path, colours
     # create file
     txt_name = os.path.split(local_keypnts_path)[1]
     txt_path = os.path.join(global_keypnts_fldr, txt_name)
-    print(f'txt_name: {txt_name}')
-    print(f'txt path: {txt_path}')
+    # print(f'txt_name: {txt_name}')
+    # print(f'txt path: {txt_path}')
     for idx, keypnt, in enumerate(trsp_coords):
         # txt_path = os.path.join(global_keypnts_fldr, )
         with open(txt_path, 'a+') as f:
