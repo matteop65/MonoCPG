@@ -12,7 +12,11 @@ Tested on Ubuntu 18.04 with python 3.7. Tested with gpu support using tensorflow
 
 The dependencies were installed in a conda environment. These can be found in environment.yml
 
+To run with stock yolo, download the yolov4-p6.weights from [darknet](https://github.com/AlexeyAB/darknet/#pre-trained-models). Rename the file to yolov4-p6_best.weights. 
+
 # Running
+
+A folder containing all the output information is placed in data/results. If a results file already exists, then it is renamed with the current UNIX time. 
 
 | Argument | Description |
 | --- | --- |
