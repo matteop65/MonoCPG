@@ -199,7 +199,7 @@ def solve_main(input):
     t = np.array([R_t[0][3], R_t[1][3], R_t[2][3]]).reshape(3,1)
 
     # to get accurate direction, need to compute for a variety of depths
-    depth_range = np.linspace(1,10,10000)
+    depth_range = np.linspace(1,100,10000)
 
     for i in range(len(anchor_pts)):
         x = anchor_pts[i]
