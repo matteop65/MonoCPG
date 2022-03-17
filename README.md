@@ -1,5 +1,7 @@
 # MonoCPG
-MonoRCP is an infrastructure-based monocular 3D object detection model for autonomous driving. Created as part of a 3rd year dissertation at the University of Warwick, in partnership with Intelligent Vehicles Research WMG. 
+MonoCPG is an infrastructure-based monocular 3D object detection model for autonomous driving. The model seeks to function as a novel 3D object detection tool for automated data annotation. Created as part of a 3rd year dissertation at the University of Warwick, in partnership with Intelligent Vehicles Research WMG. 
+
+For additional information, such as datasets, please contact author: matteo.penlington@warwic.ac.uk 
 
 
 # Visualisation of results
