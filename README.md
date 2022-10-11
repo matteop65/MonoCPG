@@ -19,11 +19,11 @@ To run with stock yolo, download the yolov4-p6.weights from [darknet](https://gi
 
 # Running
 
-A folder containing all the output information is placed in data/results. If a results file already exists, then it is renamed with the current UNIX time. 
+A folder containing all the output information is placed in *data/results*. If a *results* folder already exists, then it is renamed with the current UNIX time. 
 
 | Argument | Description |
 | --- | --- |
-| `--dataset` | The path of the images in the dataset. The images must be within the dataset folder. E.g., data/datasetv1. NB: Dataset folder must contain subfolder names "images" with images within it. </li></ul> |
+| `--dataset` | The path of the images in the dataset to run with. The images must be within the dataset folder. E.g., *data/datasetv1*. NB: Dataset folder must contain subfolder names "images" with images within it. </li></ul> |
 | `--method` | The type of solving procedure you would like to use (i.e., 3, 4 or 5 keypoints) <ul><li>default: `5` </li></ul> |
 | `--vgg_model_name` | The name of the trained model. The trained model must predict the same number of keypoints as stated in the method argument.|
 
