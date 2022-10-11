@@ -12,9 +12,10 @@ The current version of the model has been trained using a virtual environment ([
 For additional information, such as datasets, or model architecture, or performance metrics, please contact author: matteo.penlington@warwick.ac.uk 
 
 # Visualisation of results
-![alt text](https://github.com/matteop65/MonoCPG/blob/main/result_image1.jpg?raw=true)
-![alt text](https://github.com/matteop65/MonoCPG/blob/main/result_image2.jpg?raw=true)
-![alt text](https://github.com/matteop65/MonoCPG/blob/main/result_image3.jpg?raw=true)
+<img src="https://github.com/matteop65/MonoCPG/blob/main/result_image1.jpg" alt="SampleInputImage" width="500"/>
+<img src="https://github.com/matteop65/MonoCPG/blob/main/result_image2.jpg" alt="SampleInputImage" width="500"/>
+<img src="https://github.com/matteop65/MonoCPG/blob/main/result_image3.jpg" alt="SampleInputImage" width="500"/>
+
 
 # Installation
 Tested on Ubuntu 18.04 with python 3.7. Tested with gpu support using tensorflow 2.5.0. See [tensorflow-documentation](https://www.tensorflow.org/install/source#gpu) for all compatibility options.
