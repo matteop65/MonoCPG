@@ -1,8 +1,8 @@
 # Table of Contents  
-[MonoCPG](#monocpg)  
-[Visualisation of Results](#visualisation-of-results)
-[Installation](#installation)
-[Running](#running)
+- [MonoCPG](#monocpg)  
+- [Visualisation of Results](#visualisation-of-results)
+- [Installation](#installation)
+- [Running](#running)
 
 # MonoCPG
 MonoCPG is an infrastructure-based monocular 3D object detection model for autonomous driving. The model seeks to function as a novel 3D object detection tool for automated data annotation. Created as part of a 3rd year dissertation at the University of Warwick, in partnership with Intelligent Vehicles Research WMG. 
