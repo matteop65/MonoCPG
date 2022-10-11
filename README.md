@@ -1,8 +1,9 @@
 # MonoCPG
 MonoCPG is an infrastructure-based monocular 3D object detection model for autonomous driving. The model seeks to function as a novel 3D object detection tool for automated data annotation. Created as part of a 3rd year dissertation at the University of Warwick, in partnership with Intelligent Vehicles Research WMG. 
 
-For additional information, such as datasets, please contact author: matteo.penlington@warwic.ac.uk 
+The current version of the model has been trained using a virtual environment ([CARLA](https://carla.org/)), providing a proof-of-concept. Thus, functions solely on trucks. Futher development is being conducted to generalise the model to various infrastructure camera positions and vehicle thypes.
 
+For additional information, such as datasets, or model architecture, or performance metrics, please contact author: matteo.penlington@warwick.ac.uk 
 
 # Visualisation of results
 ![alt text](https://github.com/matteop65/MonoCPG/blob/main/result_image1.jpg?raw=true)
